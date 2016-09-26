@@ -39,6 +39,7 @@
 - (IBAction)taxPercent:(id)sender;
 - (IBAction)eventSplitStepper:(id)sender;
 - (IBAction)tipIncludedSwitch:(UISwitch *)sender;
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 // my own methods
 - (void) setPercentValue: (NSInteger) index;

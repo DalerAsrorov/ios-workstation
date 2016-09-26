@@ -8,14 +8,29 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation ViewController
 
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField {
+    [inputBill resignFirstResponder];
+    return YES;
+}
+
+/* The most reliable method for hiding 
+ * keyboard after taping anywhere outside 
+ * of the text field 
+ */
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [inputBill resignFirstResponder];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     tipValue.adjustsFontSizeToFitWidth = NO;
     tipValue.lineBreakMode = NSLineBreakByTruncatingTail;
     

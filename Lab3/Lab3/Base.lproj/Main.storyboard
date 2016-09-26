@@ -282,6 +282,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="inputBillAction:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="T0M-9q-0yw"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="afC-JH-Hek"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGR-jW-nQ6">
