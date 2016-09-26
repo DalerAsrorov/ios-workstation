@@ -23,6 +23,7 @@
     IBOutlet UILabel *calculatedTip;
     IBOutlet UILabel *finalTipLabel;
     
+    IBOutlet UILabel *totalWithTipOutlet;
     // my custom helper variables
     double taxPercentHolder;
     double originalBill;
@@ -44,7 +45,9 @@
 // my own methods
 - (void) setPercentValue: (NSInteger) index;
 - (void) setFinalTip: (double) value;
+- (double) computeTotalWithTip;
 - (double) computeTaxPercent: (double) value : (double) billValue;
+- (void) setTotalWithTipFinal: (double) value;
 - (void) setTotalTipValue: (double) result;
 
 @end

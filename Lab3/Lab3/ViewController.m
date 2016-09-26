@@ -63,13 +63,12 @@
     if([sender isOn]) {
         billIncluded = true;
         withTip = originalBill + taxDollarAmount;
-        [self setTotalTipValue: withTip];
-        
     } else {
         billIncluded = false;
         withTip = originalBill;
-        [self setTotalTipValue: withTip];
     }
+    [self setTotalWithTipFinal : withTip];
+    [self setTotalTipValue: withTip];
 }
 
 - (void) setTotalTipValue: (double) result {
@@ -81,7 +80,8 @@
 - (void) setFinalTip: (double) value {
     // compute final tip
     NSString * finalTipString = [NSString stringWithFormat:@"%.02f", value];
-    finalTipLabel.text = finalTipString;
+    NSString * finalTipStringWithD = [@"$" stringByAppendingString: finalTipString];
+    finalTipLabel.text = finalTipStringWithD;
 }
 
 - (IBAction)sliderCompute:(UISlider *)sender {
@@ -91,6 +91,7 @@
 
     // compute final tip
     [self setFinalTip : finalTip];
+    [self setTotalWithTipFinal: withTip + finalTip];
 }
 
 - (IBAction)taxPercentChange:(UISegmentedControl *)sender {
@@ -122,8 +123,8 @@
     }
     
     // tip includex tax
-    
-    
+    double totalWithTipTemp = [self computeTotalWithTip];
+    [self setTotalWithTipFinal : totalWithTipTemp];
 }
 
 - (void) setPercentValue: (int) index {
@@ -138,6 +139,16 @@
     } else if(index == 4) {
         taxPercentHolder = 9.5;
     }
+}
+
+- (void) setTotalWithTipFinal: (double) value {
+    NSString *withoutPrc = [NSString stringWithFormat: @"%f.02", value];
+    totalWithTipOutlet.text = withoutPrc;
+}
+
+- (double) computeTotalWithTip {
+    double finalTotalWithTip = withTip + finalTip;
+    return finalTotalWithTip;
 }
 
 @end
