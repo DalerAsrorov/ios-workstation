@@ -36,6 +36,8 @@
     double finalWithTip;
     double finalTotalPerPerson;
     
+    IBOutlet UISlider *sliderChange;
+    IBOutlet UISwitch * switchChange;
     // reserved
     double finalTotalWithTip;
 
@@ -46,6 +48,7 @@
 - (IBAction)eventSplitStepper:(id)sender;
 - (IBAction)tipIncludedSwitch:(UISwitch *)sender;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+- (IBAction)clearAll:(id)sender;
 
 // my own methods
 - (void) setPercentValue: (NSInteger) index;
@@ -56,6 +59,6 @@
 - (void) setTotalTipValue: (double) result;
 - (void) setTotalCostPerPerson: (double) result;
 - (void) computeAndSetTotalCostPerPerson;
-
+- (void) clearEverything;
 @end
 

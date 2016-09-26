@@ -45,7 +45,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f05-Fp-F6k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f05-Fp-F6k">
                                         <rect key="frame" x="377" y="123" width="48" height="34"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -311,6 +311,9 @@
                                         <state key="normal" title="CLEAR ALL">
                                             <color key="titleColor" red="0.0038238256238400936" green="0.76926988363265991" blue="0.99450534582138062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47v-vg-hfp"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46t-IK-kNh">
                                         <rect key="frame" x="401" y="52" width="143" height="35"/>
@@ -426,6 +429,8 @@
                         <outlet property="finalWithTipOutletValueTwo" destination="q5P-11-ODZ" id="M7v-l5-apT"/>
                         <outlet property="inputBill" destination="72J-I0-6Aw" id="BJj-bq-jPG"/>
                         <outlet property="percentTotalTip" destination="Xwr-oF-PSA" id="29Y-TO-Wbe"/>
+                        <outlet property="sliderChange" destination="iGj-yX-2Zn" id="2kN-JB-1ht"/>
+                        <outlet property="switchChange" destination="B4V-gs-zUm" id="p6k-ma-4nC"/>
                         <outlet property="taxAmount" destination="tGR-jW-nQ6" id="CGc-an-t5i"/>
                         <outlet property="taxPercentShow" destination="Bdv-XJ-j1m" id="5tl-BS-Yl5"/>
                         <outlet property="taxPercentValue" destination="2ug-5a-jsg" id="b5V-VG-R2U"/>

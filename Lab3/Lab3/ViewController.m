@@ -28,16 +28,15 @@
     [inputBill resignFirstResponder];
 }
 
+- (IBAction)clearAll:(id)sender {
+    [self clearEverything];
+};
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    tipValue.adjustsFontSizeToFitWidth = NO;
-    tipValue.lineBreakMode = NSLineBreakByTruncatingTail;
     
-    // default values
-    billIncluded = false;
-    finalTip = 0;
-    
+    [self clearEverything];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -170,5 +169,29 @@
     finalWithTipOutletValueTwo.text = withoutPrc;
 }
 
+- (void) clearEverything {
+    tipValue.adjustsFontSizeToFitWidth = NO;
+    tipValue.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    billIncluded = false;
+    finalTip = 0;
+    taxPercentHolder = 0;
+    originalBill = 0;
+    taxDollarAmount = 0;
+    withTip = 0;
+    
+    totalForTip.text = @"";
+    taxAmount.text = @"";
+    eventSplitValue.text = @"1";
+    totalWithTipOutlet.text = @"";
+    finalWithTipOutletValueTwo.text = @"";
+    totalWithTipOutlet.text = @"";
+    percentTotalTip.text = @"0%";
+    inputBill.text = @"";
+    finalTipLabel.text = @"";
+    [switchChange setOn:NO];
+    sliderChange.value = 0;
+    taxPercentValue.selectedSegmentIndex = 0;
+}
 
 @end
