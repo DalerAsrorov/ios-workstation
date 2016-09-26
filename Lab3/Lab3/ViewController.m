@@ -55,7 +55,11 @@
     NSNumber *formattedNum = [[NSNumberFormatter new] numberFromString: taxPercentStr];
     float val2 = formattedNum.floatValue * 0.01;
     double taxPrcComputed = val1 * val2;
-    taxAmount.text = [NSString stringWithFormat: @"%f", taxPrcComputed];
+    taxDollarAmount = taxPrcComputed;
+    NSString * formattedNumber = [NSString stringWithFormat:@"%.02f", taxPrcComputed];
+    NSString * dollarSign = @"$";
+    NSString * finalTaxStr = [dollarSign stringByAppendingString: formattedNumber];
+    taxAmount.text = finalTaxStr;
     
     printf("Tax computed: %f", taxPrcComputed);
     

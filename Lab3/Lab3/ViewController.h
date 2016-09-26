@@ -22,6 +22,7 @@
     
     // my custom helper variables
     double taxPercentHolder;
+    double taxDollarAmount;
 }
 
 - (IBAction)inputBillAction:(id)sender;
