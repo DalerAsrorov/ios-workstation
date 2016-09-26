@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _tipValue.adjustsFontSizeToFitWidth = NO;
+    _tipValue.lineBreakMode = NSLineBreakByTruncatingTail;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
