@@ -46,13 +46,33 @@
 }
 
 - (IBAction)taxPercentChange:(UISegmentedControl *)sender {
-    double taxValue = taxPercentValue.selectedSegmentIndex;
-    printf("%f", taxValue);
+    int taxIndex = taxPercentValue.selectedSegmentIndex;
+    [self setPercentValue : taxIndex];
+    
+    double val1 = taxPercentHolder;
+    NSString *taxPercentStr = inputBill.text;
+    NSLog(@"%@", taxPercentStr);
+    NSNumber *formattedNum = [[NSNumberFormatter new] numberFromString: taxPercentStr];
+    float val2 = formattedNum.floatValue * 0.01;
+    double taxPrcComputed = val1 * val2;
+    taxAmount.text = [NSString stringWithFormat: @"%f", taxPrcComputed];
+    
+    printf("Tax computed: %f", taxPrcComputed);
+    
 }
 
-//- (IBAction)taxPercentSegmentAction:(UISegmentedControl *)sender
-//{
-//    double segIndex = taxPercentSegmentValue.selectedSegmentIndex;
-//    printf("%f", segIndex);
-//}
+- (void) setPercentValue: (int) index {
+    if (index == 0) {
+        taxPercentHolder = 7.5;
+    } else if(index == 1) {
+        taxPercentHolder = 8;
+    } else if (index == 2) {
+        taxPercentHolder = 8.5;
+    } else if(index == 3) {
+        taxPercentHolder = 9;
+    } else if(index == 4) {
+        taxPercentHolder = 9.5;
+    }
+}
+
 @end

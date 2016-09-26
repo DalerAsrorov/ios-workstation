@@ -18,13 +18,19 @@
     IBOutlet UILabel *percentTotalTip;
     BOOL billIncluded;
     IBOutlet UISegmentedControl *taxPercentValue;
+    IBOutlet UILabel *taxPercentShow;
+    
+    // my custom helper variables
+    double taxPercentHolder;
 }
 
 - (IBAction)inputBillAction:(id)sender;
 - (IBAction)taxPercent:(id)sender;
 - (IBAction)eventSplitStepper:(id)sender;
 
-
+// my own methods
+- (void) setPercentValue: (NSInteger) index;
+- (double) computeTaxPercent: (double) value : (double) billValue;
 
 @end
 

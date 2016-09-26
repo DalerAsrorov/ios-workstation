@@ -270,7 +270,7 @@
                                             <constraint firstAttribute="height" constant="40" id="tRu-fL-V3A"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="sC8-w7-fuj"/>
@@ -421,6 +421,7 @@
                         <outlet property="inputBill" destination="72J-I0-6Aw" id="BJj-bq-jPG"/>
                         <outlet property="percentTotalTip" destination="Xwr-oF-PSA" id="29Y-TO-Wbe"/>
                         <outlet property="taxAmount" destination="tGR-jW-nQ6" id="CGc-an-t5i"/>
+                        <outlet property="taxPercentShow" destination="Bdv-XJ-j1m" id="5tl-BS-Yl5"/>
                         <outlet property="taxPercentValue" destination="2ug-5a-jsg" id="b5V-VG-R2U"/>
                         <outlet property="tipTotal" destination="eEK-8c-GRd" id="QOI-84-7fi"/>
                         <outlet property="tipValue" destination="3Ei-HW-Q5Q" id="Rza-Fg-vVD"/>
