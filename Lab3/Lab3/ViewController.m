@@ -21,6 +21,7 @@
     
     // default values
     billIncluded = false;
+    finalTip = 0;
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -62,10 +63,19 @@
     totalForTip.text = frmStr;
 }
 
+- (void) setFinalTip: (double) value {
+    // compute final tip
+    NSString * finalTipString = [NSString stringWithFormat:@"%.02f", value];
+    finalTipLabel.text = finalTipString;
+}
+
 - (IBAction)sliderCompute:(UISlider *)sender {
     NSString *withoutPrc = [NSString stringWithFormat: @"%d", (int)sender.value];
+    finalTip = 0.01 * (int)sender.value * withTip;
     percentTotalTip.text = [withoutPrc stringByAppendingString:@"%"];
 
+    // compute final tip
+    [self setFinalTip : finalTip];
 }
 
 - (IBAction)taxPercentChange:(UISegmentedControl *)sender {
@@ -84,6 +94,7 @@
     NSString * formattedNumber = [NSString stringWithFormat:@"%.02f", taxPrcComputed];
     NSString * dollarSign = @"$";
     NSString * finalTaxStr = [dollarSign stringByAppendingString: formattedNumber];
+    
     taxAmount.text = finalTaxStr;
     
     printf("Tax computed: %f", taxPrcComputed);

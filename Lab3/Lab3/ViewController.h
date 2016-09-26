@@ -20,12 +20,19 @@
     IBOutlet UISegmentedControl *taxPercentValue;
     IBOutlet UILabel *taxPercentShow;
     IBOutlet UILabel * totalForTip;
+    IBOutlet UILabel *calculatedTip;
+    IBOutlet UILabel *finalTipLabel;
+    
     // my custom helper variables
     double taxPercentHolder;
     double originalBill;
     double taxDollarAmount;
     double withTip;
     int countSplit;
+    double finalTip;
+    double finalWithTip;
+    double finalTotalPerPerson;
+
 }
 
 - (IBAction)inputBillAction:(id)sender;
@@ -35,6 +42,7 @@
 
 // my own methods
 - (void) setPercentValue: (NSInteger) index;
+- (void) setFinalTip: (double) value;
 - (double) computeTaxPercent: (double) value : (double) billValue;
 - (void) setTotalTipValue: (double) result;
 
