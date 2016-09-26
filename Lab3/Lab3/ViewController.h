@@ -9,8 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UILabel *tipValue;
+    IBOutlet UILabel *tipTotal;
+    IBOutlet UILabel *taxAmount;
+    IBOutlet UILabel *eventSplitValue;
+    IBOutlet UITextField *inputBill;
+    IBOutlet UILabel *percentTotalTip;
+    BOOL billIncluded;
+    IBOutlet UISegmentedControl *taxPercentValue;
+}
 
-@property (weak, nonatomic) IBOutlet UILabel *tipValue;
+- (IBAction)inputBillAction:(id)sender;
+- (IBAction)taxPercent:(id)sender;
+- (IBAction)eventSplitStepper:(id)sender;
+
+
 
 @end
 
