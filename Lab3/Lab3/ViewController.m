@@ -18,6 +18,10 @@
     [super viewDidLoad];
     tipValue.adjustsFontSizeToFitWidth = NO;
     tipValue.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    // default values
+    billIncluded = false;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -39,6 +43,25 @@
 //    printf("%f", sender.value);
 }
 
+- (IBAction)tipIncludedSwitch:(UISwitch *)sender {
+    if([sender isOn]) {
+        billIncluded = true;
+        withTip = originalBill + taxDollarAmount;
+        [self setTotalTipValue: withTip];
+        
+    } else {
+        billIncluded = false;
+        withTip = originalBill;
+        [self setTotalTipValue: withTip];
+    }
+}
+
+- (void) setTotalTipValue: (double) result {
+    NSString* frmStr = @"";
+    frmStr = [NSString stringWithFormat:@"%f", result];
+    totalForTip.text = frmStr;
+}
+
 - (IBAction)sliderCompute:(UISlider *)sender {
     NSString *withoutPrc = [NSString stringWithFormat: @"%d", (int)sender.value];
     percentTotalTip.text = [withoutPrc stringByAppendingString:@"%"];
@@ -51,6 +74,8 @@
     
     double val1 = taxPercentHolder;
     NSString *taxPercentStr = inputBill.text;
+    NSNumber *formattedBill = [[NSNumberFormatter new] numberFromString: taxPercentStr];
+    originalBill = formattedBill.floatValue;
     NSLog(@"%@", taxPercentStr);
     NSNumber *formattedNum = [[NSNumberFormatter new] numberFromString: taxPercentStr];
     float val2 = formattedNum.floatValue * 0.01;
@@ -62,6 +87,16 @@
     taxAmount.text = finalTaxStr;
     
     printf("Tax computed: %f", taxPrcComputed);
+    if(billIncluded) {
+        withTip = originalBill + taxDollarAmount;
+        [self setTotalTipValue: withTip];
+    } else if (!billIncluded) {
+        withTip = originalBill;
+        [self setTotalTipValue: withTip];
+    }
+    
+    // tip includex tax
+    
     
 }
 
