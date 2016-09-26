@@ -75,8 +75,9 @@
 
 - (void) setTotalTipValue: (double) result {
     NSString* frmStr = @"";
-    frmStr = [NSString stringWithFormat:@"%f", result];
-    totalForTip.text = frmStr;
+    frmStr = [NSString stringWithFormat:@"%0.02f", result];
+    NSString * finalTipStringWithD = [@"$" stringByAppendingString: frmStr];
+    totalForTip.text = finalTipStringWithD;
 }
 
 - (void) setFinalTip: (double) value {
@@ -95,6 +96,7 @@
     // compute final tip
     [self setFinalTip : finalTip];
     [self setTotalWithTipFinal: finalWithTip];
+    [self computeAndSetTotalCostPerPerson];
 }
 
 - (IBAction)taxPercentChange:(UISegmentedControl *)sender {
@@ -146,8 +148,9 @@
 
 - (void) setTotalWithTipFinal: (double) value {
     NSString *withoutPrc = [NSString stringWithFormat: @"%.02f", value];
+    NSString * finalTaxStr = [@"$" stringByAppendingString: withoutPrc];
     finalTotalWithTip = value;
-    totalWithTipOutlet.text = withoutPrc;
+    totalWithTipOutlet.text = finalTaxStr;
 }
 
 - (double) computeTotalWithTip {
@@ -165,8 +168,9 @@
     else
         tempValueTip = (double)(finalTotalWithTip / countSplit);
     
-    NSString *withoutPrc = [NSString stringWithFormat: @"%.02f", tempValueTip];
-    finalWithTipOutletValueTwo.text = withoutPrc;
+    NSString * withoutPrc = [NSString stringWithFormat: @"%.02f", tempValueTip];
+    NSString * finalTaxStr = [@"$" stringByAppendingString: withoutPrc];
+    finalWithTipOutletValueTwo.text = finalTaxStr;
 }
 
 - (void) clearEverything {
@@ -179,13 +183,14 @@
     originalBill = 0;
     taxDollarAmount = 0;
     withTip = 0;
+    finalTotalWithTip = 0;
+    countSplit = 1;
     
     totalForTip.text = @"";
     taxAmount.text = @"";
     eventSplitValue.text = @"1";
     totalWithTipOutlet.text = @"";
     finalWithTipOutletValueTwo.text = @"";
-    totalWithTipOutlet.text = @"";
     percentTotalTip.text = @"0%";
     inputBill.text = @"";
     finalTipLabel.text = @"";
