@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 {
+    IBOutlet UILabel *finalValuePerPersonOutlet;
     IBOutlet UILabel *tipValue;
     IBOutlet UILabel *tipTotal;
     IBOutlet UILabel *taxAmount;
@@ -23,6 +24,7 @@
     IBOutlet UILabel *calculatedTip;
     IBOutlet UILabel *finalTipLabel;
     
+    IBOutlet UILabel *finalWithTipOutletValueTwo;
     IBOutlet UILabel *totalWithTipOutlet;
     // my custom helper variables
     double taxPercentHolder;
@@ -33,6 +35,9 @@
     double finalTip;
     double finalWithTip;
     double finalTotalPerPerson;
+    
+    // reserved
+    double finalTotalWithTip;
 
 }
 
@@ -49,6 +54,8 @@
 - (double) computeTaxPercent: (double) value : (double) billValue;
 - (void) setTotalWithTipFinal: (double) value;
 - (void) setTotalTipValue: (double) result;
+- (void) setTotalCostPerPerson: (double) result;
+- (void) computeAndSetTotalCostPerPerson;
 
 @end
 

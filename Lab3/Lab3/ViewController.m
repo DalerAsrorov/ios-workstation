@@ -56,7 +56,10 @@
     int eventValueInt = (int) sender.value;
     NSString* valueStr = [NSString stringWithFormat:@"%i", eventValueInt];
     eventSplitValue.text = [@"" stringByAppendingString: valueStr];
-//    printf("%f", sender.value);
+    countSplit = eventValueInt;
+    [self computeAndSetTotalCostPerPerson];
+    //countSplit
+
 }
 
 - (IBAction)tipIncludedSwitch:(UISwitch *)sender {
@@ -88,10 +91,11 @@
     NSString *withoutPrc = [NSString stringWithFormat: @"%d", (int)sender.value];
     finalTip = 0.01 * (int)sender.value * withTip;
     percentTotalTip.text = [withoutPrc stringByAppendingString:@"%"];
-
+    finalWithTip = withTip + finalTip;
+    
     // compute final tip
     [self setFinalTip : finalTip];
-    [self setTotalWithTipFinal: withTip + finalTip];
+    [self setTotalWithTipFinal: finalWithTip];
 }
 
 - (IBAction)taxPercentChange:(UISegmentedControl *)sender {
@@ -142,7 +146,8 @@
 }
 
 - (void) setTotalWithTipFinal: (double) value {
-    NSString *withoutPrc = [NSString stringWithFormat: @"%f.02", value];
+    NSString *withoutPrc = [NSString stringWithFormat: @"%.02f", value];
+    finalTotalWithTip = value;
     totalWithTipOutlet.text = withoutPrc;
 }
 
@@ -150,5 +155,20 @@
     double finalTotalWithTip = withTip + finalTip;
     return finalTotalWithTip;
 }
+
+- (void) computeAndSetTotalCostPerPerson {
+    printf("finalWithTip: %.02f and countSplit %d ", finalTotalWithTip, countSplit);
+    double tempValueTip = 0;
+    
+    // prevents the label from showing null...
+    if(countSplit <= 0)
+        tempValueTip = finalTotalWithTip;
+    else
+        tempValueTip = (double)(finalTotalWithTip / countSplit);
+    
+    NSString *withoutPrc = [NSString stringWithFormat: @"%.02f", tempValueTip];
+    finalWithTipOutletValueTwo.text = withoutPrc;
+}
+
 
 @end
