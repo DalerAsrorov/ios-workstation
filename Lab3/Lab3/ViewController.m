@@ -61,6 +61,13 @@
 
 }
 
+- (void) setTotalCostPerPerson : (double) value {
+    NSString * withoutPrc = [NSString stringWithFormat: @"%.02f", value];
+    NSString * finalTaxStr = [@"$" stringByAppendingString: withoutPrc];
+    finalWithTipOutletValueTwo.text = finalTaxStr;
+
+}
+
 - (IBAction)tipIncludedSwitch:(UISwitch *)sender {
     if([sender isOn]) {
         billIncluded = true;
@@ -71,10 +78,33 @@
     }
     [self setTotalWithTipFinal : withTip];
     [self setTotalTipValue: withTip];
+    // update value of tip and total per person
+    
+//    printf("")
+    // calculate total for Tip
+    double totalForTipTemp = 0;
+    totalForTipTemp = totalForTipHolder * (percentValueRaw * 0.01);
+    [self setFinalTip : totalForTipTemp];
+    double tempTotalCostPerPerson = 0;
+    
+    if(countSplit <= 0) {
+        printf("Counsplist <= 0");
+        printf("%d", countSplit);
+        tempTotalCostPerPerson = (double) withTip / 1;
+        printf("%f", tempTotalCostPerPerson);
+        [self setTotalCostPerPerson: tempTotalCostPerPerson];
+    } else {
+        printf("Counsplist <= 0");
+        printf("%d", countSplit);
+        tempTotalCostPerPerson = (double) withTip / countSplit;
+        printf("%f", tempTotalCostPerPerson);
+        [self setTotalCostPerPerson: tempTotalCostPerPerson];
+    }
 }
 
 - (void) setTotalTipValue: (double) result {
     NSString* frmStr = @"";
+    totalForTipHolder = result;
     frmStr = [NSString stringWithFormat:@"%0.02f", result];
     NSString * finalTipStringWithD = [@"$" stringByAppendingString: frmStr];
     totalForTip.text = finalTipStringWithD;
@@ -90,6 +120,7 @@
 - (IBAction)sliderCompute:(UISlider *)sender {
     NSString *withoutPrc = [NSString stringWithFormat: @"%d", (int)sender.value];
     finalTip = 0.01 * (int)sender.value * withTip;
+    percentValueRaw = (int)sender.value;
     percentTotalTip.text = [withoutPrc stringByAppendingString:@"%"];
     finalWithTip = withTip + finalTip;
     
@@ -185,6 +216,7 @@
     withTip = 0;
     finalTotalWithTip = 0;
     countSplit = 1;
+    percentValueRaw = 0;
     
     totalForTip.text = @"";
     taxAmount.text = @"";

@@ -35,6 +35,9 @@
     double finalTip;
     double finalWithTip;
     double finalTotalPerPerson;
+    double totalForTipHolder;
+    double percentValueRaw;
+    
     
     IBOutlet UISlider *sliderChange;
     IBOutlet UISwitch * switchChange;
@@ -57,8 +60,8 @@
 - (double) computeTaxPercent: (double) value : (double) billValue;
 - (void) setTotalWithTipFinal: (double) value;
 - (void) setTotalTipValue: (double) result;
-- (void) setTotalCostPerPerson: (double) result;
 - (void) computeAndSetTotalCostPerPerson;
+- (void) setTotalCostPerPerson : (double) value;
 - (void) clearEverything;
 @end
 
