@@ -112,6 +112,7 @@
 
 - (void) setFinalTip: (double) value {
     // compute final tip
+    finalTipValue = value;
     NSString * finalTipString = [NSString stringWithFormat:@"%.02f", value];
     NSString * finalTipStringWithD = [@"$" stringByAppendingString: finalTipString];
     finalTipLabel.text = finalTipStringWithD;
@@ -159,8 +160,8 @@
     }
     
     // tip includex tax
-    double totalWithTipTemp = [self computeTotalWithTip];
-    [self setTotalWithTipFinal : totalWithTipTemp];
+    [self computeTotalWithTip];
+    [self setTotalWithTipFinal : finalTotalWithTip];
 }
 
 - (void) setPercentValue: (int) index {
@@ -184,9 +185,8 @@
     totalWithTipOutlet.text = finalTaxStr;
 }
 
-- (double) computeTotalWithTip {
-    double finalTotalWithTip = withTip + finalTip;
-    return finalTotalWithTip;
+- (void) computeTotalWithTip {
+    finalTotalWithTip = withTip + finalTip;
 }
 
 - (void) computeAndSetTotalCostPerPerson {
@@ -217,6 +217,7 @@
     finalTotalWithTip = 0;
     countSplit = 1;
     percentValueRaw = 0;
+    finalTipValue = 0;
     
     totalForTip.text = @"";
     taxAmount.text = @"";

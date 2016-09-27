@@ -34,6 +34,7 @@
     int countSplit;
     double finalTip;
     double finalWithTip;
+    double finalTipValue;
     double finalTotalPerPerson;
     double totalForTipHolder;
     double percentValueRaw;
@@ -56,7 +57,7 @@
 // my own methods
 - (void) setPercentValue: (NSInteger) index;
 - (void) setFinalTip: (double) value;
-- (double) computeTotalWithTip;
+- (void) computeTotalWithTip;
 - (double) computeTaxPercent: (double) value : (double) billValue;
 - (void) setTotalWithTipFinal: (double) value;
 - (void) setTotalTipValue: (double) result;
