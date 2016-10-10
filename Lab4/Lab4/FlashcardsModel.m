@@ -97,6 +97,7 @@
 
 
 // Inserting a flashcard without index.
+// Add flashcard to the end of the array.
 - (void) insertWithQuestion: (NSString *) question
                      answer: (NSString *) ans
                      favorite: (BOOL)fav {
@@ -105,18 +106,50 @@
 }
 
 // Inserting a flashcard at index.
+// Add flashcard at the specified index of the array.
 - (void) insertWithQuestion: (NSString *) question
                      answer: (NSString *) ans
                    favorite: (NSNumber *) fav
                     atIndex: (NSUInteger) index {
     if(!(index <= self.flashcards.count)) {
         NSLog(@"index is bigger than the number of flashcards in the array.");
-        exit(0);
+//        exit(0);
     }
     
     Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
     [self.flashcards insertObject:newFlashcard atIndex:index];
 }
+
+// Removing a flashcard without index.
+// Remove last flashcard from the array.
+- (void) removeFlashcard {
+    [self.flashcards removeLastObject];
+}
+
+// Removing a flashcard with an index.
+// Remove flashcard at the specified index of the array.
+- (void) removeFlashcardAtIndex: (NSUInteger) index {
+    if(index < self.flashcards.count) {
+        [self.flashcards removeObjectAtIndex: index];
+    } else {
+        NSLog(@"Something is wrong with the index %lu", (unsigned long)index);
+    }
+}
+
+// Favorite/unfavorite the current flashcard
+-(void) toggleFavorite {
+    
+}
+
+
+-(NSArray *) favoriteFlashcards {
+    NSArray * array = [NSArray array];
+    // do stuff
+    
+    
+    return array;
+}
+
 
 
 
