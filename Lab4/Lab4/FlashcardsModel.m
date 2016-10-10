@@ -100,7 +100,7 @@
 // Add flashcard to the end of the array.
 - (void) insertWithQuestion: (NSString *) question
                      answer: (NSString *) ans
-                     favorite: (BOOL)fav {
+                     favorite: (BOOL) fav {
     Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
     [self.flashcards addObject: newFlashcard];
 }
@@ -113,7 +113,6 @@
                     atIndex: (NSUInteger) index {
     if(!(index <= self.flashcards.count)) {
         NSLog(@"index is bigger than the number of flashcards in the array.");
-//        exit(0);
     }
     
     Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
@@ -138,7 +137,18 @@
 
 // Favorite/unfavorite the current flashcard
 -(void) toggleFavorite {
-//    BOOL currentFavoriteStatus = self.
+    NSUInteger currentIndex = self.currentIndex;
+    NSUInteger counterIndex = 0;
+    for(Flashcard *flash in self.flashcards) {
+        if(currentIndex == counterIndex) {
+            if(flash.isFavorite == true) {
+                ((Flashcard*)[self.flashcards objectAtIndex:currentIndex]).isFavorite = false;
+            } else {
+                ((Flashcard*)[self.flashcards objectAtIndex:currentIndex]).isFavorite = true;
+            }
+        }
+        counterIndex++;
+    }
     
 }
 

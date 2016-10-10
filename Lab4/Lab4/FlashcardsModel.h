@@ -27,7 +27,8 @@
 
 // Inserting a flashcard
 - (void) insertWithQuestion: (NSString *) question
-                     answer: (NSString *) ans;
+                     answer: (NSString *) ans
+                     favorite: (BOOL) fav;
 - (void) insertWithQuestion: (NSString *) question
                      answer: (NSString *) ans
                      favorite: (NSNumber *) fav
