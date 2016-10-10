@@ -138,16 +138,24 @@
 
 // Favorite/unfavorite the current flashcard
 -(void) toggleFavorite {
+//    BOOL currentFavoriteStatus = self.
     
 }
 
 
--(NSArray *) favoriteFlashcards {
-    NSArray * array = [NSArray array];
-    // do stuff
+- (NSArray *) favoriteFlashcards {
+    NSArray * arrayOfFlashcards = [NSArray array];
+    NSMutableArray * tempMutArray = [NSMutableArray array];
     
+    for(Flashcard *flashcard in self.flashcards) {
+        if (flashcard.isFavorite) {
+            [tempMutArray addObject: flashcard];
+        }
+    }
     
-    return array;
+    arrayOfFlashcards = [tempMutArray copy];
+    
+    return arrayOfFlashcards;
 }
 
 
