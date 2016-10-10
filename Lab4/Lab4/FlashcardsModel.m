@@ -19,6 +19,7 @@
 
 - (instancetype) init {
     if(self = [super init]) {
+        // creating 5 Flashcard class instances.
         Flashcard *card1 = [Flashcard initWithQuestion: @"Is Objective-C object-oriented Language?"
                                                         answer: @"Yes"];
         Flashcard *card2 = [Flashcard initWithQuestion: @"What's 2 times 2?"
@@ -30,12 +31,95 @@
         Flashcard *card5 = [Flashcard initWithQuestion: @"What's the first programming language I learned?"
                                                 answer: @"Java"];
         
+        // placing the 5 created objects into mutable array
         _flashcards = [[NSMutableArray alloc] initWithObjects: card1, card2, card3, card4, card5, nil];
+        
+        // setting current index to 0
         _currentIndex = 0;
     }
     
     return self;
 }
+
+// Creating the model
++ (instancetype) sharedModel {
+    static FlashcardsModel *_sharedModel = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+         _sharedModel = [[FlashcardsModel alloc] init];
+    });
+    
+    return _sharedModel;
+}
+
+// Accessing number of flashcards in model
+- (NSUInteger) numberOfFlashcards {
+    return [self.flashcards count];
+}
+
+// Accessing a flashcard – sets currentIndex appropriately
+- (Flashcard *) randomFlashcard {
+    // Assigns number between 0 and self.flaschards.count - 1
+    NSInteger randomNum = arc4random_uniform((uint32_t) self.flashcards.count);
+    
+    return self.flashcards[randomNum];
+}
+
+- (Flashcard *) flashcardAtIndex: (NSUInteger)index {
+    if(index > (self.flashcards.count - 1)) {
+        NSLog(@"Wrong index. Should be between 0 and 4");
+        return nil;
+    }
+    
+    return self.flashcards[index];
+}
+
+- (Flashcard *) nextFlashcard {
+    NSUInteger currentIndex = self.currentIndex;
+    if(currentIndex == self.flashcards.count - 1) {
+        NSLog(@"This is the last element of the array. No next nodes.");
+        return nil;
+    }
+    
+    return self.flashcards[currentIndex + 1];
+}
+
+- (Flashcard *) prevFlashcard {
+    NSUInteger currentIndex = self.currentIndex;
+    if(currentIndex == 0) {
+        NSLog(@"This is the first element of the array. No previous nodes.");
+        return nil;
+    }
+    
+    return self.flashcards[currentIndex - 1];
+}
+
+
+// Inserting a flashcard without index.
+- (void) insertWithQuestion: (NSString *) question
+                     answer: (NSString *) ans
+                     favorite: (BOOL)fav {
+    Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
+    [self.flashcards addObject: newFlashcard];
+}
+
+// Inserting a flashcard at index.
+- (void) insertWithQuestion: (NSString *) question
+                     answer: (NSString *) ans
+                   favorite: (NSNumber *) fav
+                    atIndex: (NSUInteger) index {
+    if(!(index <= self.flashcards.count)) {
+        NSLog(@"index is bigger than the number of flashcards in the array.");
+        exit(0);
+    }
+    
+    Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
+    [self.flashcards insertObject:newFlashcard atIndex:index];
+}
+
+
+
 
 
 @end
