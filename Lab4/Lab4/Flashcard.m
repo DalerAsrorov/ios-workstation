@@ -8,6 +8,14 @@
 
 #import "Flashcard.h"
 
+@interface Flashcard ()
+
+@property (readwrite) NSString * question;
+@property (readwrite) NSString * answer;
+
+@end
+
+
 @implementation Flashcard
 
 //- (instancetype) init: (Flashcard *) obj {
@@ -22,8 +30,9 @@
                            answer: (NSString *) ans
 {
     Flashcard *flash = [[Flashcard alloc] init:nil];
-    
     flash.answer = ans;
+    flash.question = question;
+    return flash;
     
 }
 
@@ -31,7 +40,11 @@
                            answer: (NSString *) ans
                        isFavorite: (BOOL) isFav
 {
-
+    Flashcard *flash = [[Flashcard alloc] init:nil];
+    flash.answer = ans;
+    flash.question = question;
+    flash.isFavorite = isFav;
+    return flash;
 }
 
 
