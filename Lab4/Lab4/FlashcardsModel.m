@@ -61,10 +61,10 @@
 // Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) randomFlashcard {
     // Assigns number between 0 and self.flaschards.count - 1
-    unsigned int randomNum = arc4random_uniform((uint32_t) self.flashcards.count);
+    uint32_t randomNum = arc4random_uniform((uint32_t) self.flashcards.count);
     
     // setting current index to that number
-    _currentIndex =  randomNum;
+    _currentIndex = randomNum;
     
     return self.flashcards[randomNum];
 }
@@ -78,6 +78,7 @@
     
     // setting current index to that number
     _currentIndex = (uint32_t)index;
+    
     return self.flashcards[index];
 }
 
@@ -91,6 +92,7 @@
     
     unsigned int newIndex = (uint32_t)currentIndex + 1;
     
+    // setting current index to the appropriate number
     _currentIndex = newIndex;
     
     return self.flashcards[newIndex];
@@ -106,6 +108,7 @@
     
     unsigned int newIndex = (uint32_t)currentIndex - 1;
     
+    // setting current index to the appropriate number
     _currentIndex = newIndex;
     
     return self.flashcards[newIndex];
@@ -182,10 +185,5 @@
     
     return arrayOfFlashcards;
 }
-
-
-
-
-
 
 @end
