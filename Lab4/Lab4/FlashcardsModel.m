@@ -61,20 +61,27 @@
 // Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) randomFlashcard {
     // Assigns number between 0 and self.flaschards.count - 1
-    NSInteger randomNum = arc4random_uniform((uint32_t) self.flashcards.count);
+    unsigned int randomNum = arc4random_uniform((uint32_t) self.flashcards.count);
+    
+    // setting current index to that number
+    _currentIndex =  randomNum;
     
     return self.flashcards[randomNum];
 }
 
+// Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) flashcardAtIndex: (NSUInteger)index {
     if(index > (self.flashcards.count - 1)) {
         NSLog(@"Wrong index. Should be between 0 and 4");
         return nil;
     }
     
+    // setting current index to that number
+    _currentIndex = (uint32_t)index;
     return self.flashcards[index];
 }
 
+// Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) nextFlashcard {
     NSUInteger currentIndex = self.currentIndex;
     if(currentIndex == self.flashcards.count - 1) {
@@ -82,9 +89,14 @@
         return nil;
     }
     
-    return self.flashcards[currentIndex + 1];
+    unsigned int newIndex = (uint32_t)currentIndex + 1;
+    
+    _currentIndex = newIndex;
+    
+    return self.flashcards[newIndex];
 }
 
+// Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) prevFlashcard {
     NSUInteger currentIndex = self.currentIndex;
     if(currentIndex == 0) {
@@ -92,7 +104,11 @@
         return nil;
     }
     
-    return self.flashcards[currentIndex - 1];
+    unsigned int newIndex = (uint32_t)currentIndex - 1;
+    
+    _currentIndex = newIndex;
+    
+    return self.flashcards[newIndex];
 }
 
 
@@ -137,14 +153,13 @@
 
 // Favorite/unfavorite the current flashcard
 -(void) toggleFavorite {
-    NSUInteger currentIndex = self.currentIndex;
     NSUInteger counterIndex = 0;
     for(Flashcard *flash in self.flashcards) {
-        if(currentIndex == counterIndex) {
+        if(_currentIndex == counterIndex) {
             if(flash.isFavorite == true) {
-                ((Flashcard*)[self.flashcards objectAtIndex:currentIndex]).isFavorite = false;
+                ((Flashcard*)[self.flashcards objectAtIndex:_currentIndex]).isFavorite = false;
             } else {
-                ((Flashcard*)[self.flashcards objectAtIndex:currentIndex]).isFavorite = true;
+                ((Flashcard*)[self.flashcards objectAtIndex:_currentIndex]).isFavorite = true;
             }
         }
         counterIndex++;
@@ -152,7 +167,7 @@
     
 }
 
-
+// returns an array of favorite flashcards
 - (NSArray *) favoriteFlashcards {
     NSArray * arrayOfFlashcards = [NSArray array];
     NSMutableArray * tempMutArray = [NSMutableArray array];
