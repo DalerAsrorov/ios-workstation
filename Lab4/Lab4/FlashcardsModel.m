@@ -90,7 +90,7 @@
         return nil;
     }
     
-    unsigned int newIndex = (uint32_t)currentIndex + 1;
+    uint32_t newIndex = (uint32_t)currentIndex + 1;
     
     // setting current index to the appropriate number
     _currentIndex = newIndex;
@@ -106,7 +106,7 @@
         return nil;
     }
     
-    unsigned int newIndex = (uint32_t)currentIndex - 1;
+    uint32_t newIndex = (uint32_t)currentIndex - 1;
     
     // setting current index to the appropriate number
     _currentIndex = newIndex;
