@@ -20,15 +20,15 @@
 - (instancetype) init {
     if(self = [super init]) {
         // creating 5 Flashcard class instances.
-        Flashcard *card1 = [Flashcard initWithQuestion: @"Is Objective-C object-oriented Language?"
+        Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?"
                                                         answer: @"Yes"];
-        Flashcard *card2 = [Flashcard initWithQuestion: @"What's 2 times 2?"
+        Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
                                                 answer: @"4"];
-        Flashcard *card3 = [Flashcard initWithQuestion: @"Who's the first person to land on the moon?"
+        Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?"
                                                 answer: @"Neil Armstrong"];
-        Flashcard *card4 = [Flashcard initWithQuestion: @"Are Swift and Objective-C both created by Apple?"
+        Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?"
                                                 answer: @"No."];
-        Flashcard *card5 = [Flashcard initWithQuestion: @"What's the first programming language I learned?"
+        Flashcard *card5 = [[Flashcard alloc] initWithQuestion: @"What's the first programming language I learned?"
                                                 answer: @"Java"];
         
         // placing the 5 created objects into mutable array
@@ -120,7 +120,8 @@
 - (void) insertWithQuestion: (NSString *) question
                      answer: (NSString *) ans
                      favorite: (BOOL) fav {
-    Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
+    
+    Flashcard *newFlashcard = [[Flashcard alloc] initWithQuestion: question answer: ans isFavorite: fav];
     [self.flashcards addObject: newFlashcard];
 }
 
@@ -134,7 +135,7 @@
         NSLog(@"index is bigger than the number of flashcards in the array.");
     }
     
-    Flashcard *newFlashcard = [Flashcard initWithQuestion: question answer: ans isFavorite: fav];
+    Flashcard *newFlashcard = [[Flashcard alloc] initWithQuestion: question answer: ans isFavorite: fav];
     [self.flashcards insertObject:newFlashcard atIndex:index];
 }
 

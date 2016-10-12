@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlashcardsModel.h"
 
 @interface ViewController : UIViewController
 

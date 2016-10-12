@@ -14,11 +14,9 @@
 @property (readonly) NSString * answer;
 @property BOOL isFavorite;
 
-- (instancetype) init: (Flashcard *) obj;
-
-+ (instancetype) initWithQuestion: (NSString *) question
+- (instancetype) initWithQuestion: (NSString *) question
                            answer: (NSString *) ans;
-+ (instancetype) initWithQuestion: (NSString *) question
+- (instancetype) initWithQuestion: (NSString *) question
                            answer: (NSString *) ans
                        isFavorite: (BOOL) isFav;
 

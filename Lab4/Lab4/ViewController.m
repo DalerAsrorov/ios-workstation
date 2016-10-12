@@ -8,7 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    FlashcardsModel *model;
+    
+}
 
 @end
 
@@ -16,6 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // initializing model
+    model = [FlashcardsModel sharedModel];
+    Flashcard *randomFlashcard = [model randomFlashcard];
+    NSLog(@"The answer is: %@", randomFlashcard.answer);
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

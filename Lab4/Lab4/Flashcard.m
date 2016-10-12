@@ -26,25 +26,30 @@
 //    return self;
 //}
 
-+ (instancetype) initWithQuestion: (NSString *) question
-                           answer: (NSString *) ans
+- (instancetype) initWithQuestion:(NSString *)question
+                           answer:(NSString *)ans
 {
-    Flashcard *flash = [[Flashcard alloc] init:nil];
-    flash.answer = ans;
-    flash.question = question;
-    return flash;
-    
+    self = [super init];
+    if (self) {
+        _answer = ans;
+        _question = question;
+        _isFavorite = NO;
+    }
+    return self;
 }
 
-+ (instancetype) initWithQuestion: (NSString *) question
+
+- (instancetype) initWithQuestion: (NSString *) question
                            answer: (NSString *) ans
                        isFavorite: (BOOL) isFav
 {
-    Flashcard *flash = [[Flashcard alloc] init:nil];
-    flash.answer = ans;
-    flash.question = question;
-    flash.isFavorite = isFav;
-    return flash;
+    self = [super init];
+    if (self) {
+        _answer = ans;
+        _question = question;
+        _isFavorite = isFav;
+    }
+    return self;
 }
 
 
