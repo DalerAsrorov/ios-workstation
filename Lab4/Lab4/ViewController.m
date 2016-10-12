@@ -23,7 +23,9 @@
     // initializing model
     model = [FlashcardsModel sharedModel];
     Flashcard *randomFlashcard = [model randomFlashcard];
-    NSLog(@"The answer is: %@", randomFlashcard.answer);
+    NSString * currentQuestion = randomFlashcard.question;
+    NSString * currentAnswer = randomFlashcard.answer;
+    _questionLabel.text = currentQuestion;
     
     
     // Do any additional setup after loading the view, typically from a nib.
