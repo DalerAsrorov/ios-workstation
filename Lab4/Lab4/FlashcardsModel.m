@@ -20,13 +20,13 @@
 - (instancetype) init {
     if(self = [super init]) {
         // creating 5 Flashcard class instances.
-        Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?"
+        Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
                                                         answer: @"Yes"];
         Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
-                                                answer: @"4"];
-        Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?"
+                                                answer: @"4"] ; //
+        Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?" //
                                                 answer: @"Neil Armstrong"];
-        Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?"
+        Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?" //
                                                 answer: @"No."];
         Flashcard *card5 = [[Flashcard alloc] initWithQuestion: @"What's the first programming language I learned?"
                                                 answer: @"Java"];

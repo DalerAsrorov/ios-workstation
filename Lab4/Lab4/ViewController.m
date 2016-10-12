@@ -36,14 +36,17 @@
     self.leftSwipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     self.rightSwipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
     
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoTaps:)];
     tapGesture.numberOfTapsRequired = 2;
+    
+    UITapGestureRecognizer *oneTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleOneTap:)];
+    tapGesture.numberOfTapsRequired = 1;
     
     
     [self.view addGestureRecognizer: self.leftSwipeGesture];
     [self.view addGestureRecognizer: self.rightSwipeGesture];
     [self.view addGestureRecognizer:tapGesture];
-    
+    [self.view addGestureRecognizer:oneTapGesture];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -65,13 +68,21 @@
     }
 }
 
-- (void) handleTapGesture: (UITapGestureRecognizer *) sender {
+- (void) handleTwoTaps: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         Flashcard *card = [model flashcardAtIndex:
                            model.currentIndex];
         _questionLabel.text = card.answer;
     }
 }
+
+- (void) handleOneTap: (UITapGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        Flashcard *card = [model randomFlashcard];
+        _questionLabel.text = card.question;
+    }
+}
+
 
 
 
