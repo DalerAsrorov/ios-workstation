@@ -12,6 +12,10 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 
+@property (nonatomic, strong) UISwipeGestureRecognizer* leftSwipeGesture;
+@property (nonatomic, strong) UISwipeGestureRecognizer* rightSwipeGesture;
+@property (nonatomic, strong) UISwipeGestureRecognizer* doubleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
