@@ -46,7 +46,7 @@
     [self.view addGestureRecognizer: self.leftSwipeGesture];
     [self.view addGestureRecognizer: self.rightSwipeGesture];
     [self.view addGestureRecognizer:tapGesture];
-    [self.view addGestureRecognizer:oneTapGesture];
+//    [self.view addGestureRecognizer:oneTapGesture];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -70,20 +70,49 @@
 
 - (void) handleTwoTaps: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
-        Flashcard *card = [model flashcardAtIndex:
-                           model.currentIndex];
-        _questionLabel.text = card.answer;
+        Flashcard *curFlash = [model flashcardAtIndex: model.currentIndex];
+        [self animateFadeOut: curFlash.question];
+        [self animateFadeIn: curFlash.answer];
     }
 }
 
 - (void) handleOneTap: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         Flashcard *card = [model randomFlashcard];
-        _questionLabel.text = card.question;
+        
+        
+        
     }
 }
 
+- (void) animateFadeIn: (NSString *) str {
+    _questionLabel.text = str;
+    
+    // switch colors
+    if(_questionLabel.textColor == UIColor.blackColor) {
+        _questionLabel.textColor = [UIColor colorWithRed: (153.0f/255.0f) green: 0.0 blue: 0.0 alpha: 1.0];
+    } else {
+        _questionLabel.textColor = UIColor.blackColor;
+    }
+    
+    // proceed with animation
+    [UIView animateWithDuration: 2.0
+        animations:^{
+            _questionLabel.alpha = 1;
+    }];
+}
 
-
+- (void) animateFadeOut:(NSString *) str {
+    [UIView animateWithDuration: 2.0
+        animations:^{
+            // Fade out the old text of label
+            _questionLabel.alpha = 0;
+        }
+        completion:^(BOOL finished) {
+            // Upon completion, call animateFadeIn
+            [self animateFadeIn: str];
+        }
+    ];
+}
 
 @end

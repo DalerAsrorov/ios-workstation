@@ -21,7 +21,7 @@
     if(self = [super init]) {
         // creating 5 Flashcard class instances.
         Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
-                                                        answer: @"Yes"];
+                                                        answer: @"Yes" isFavorite: true];
         Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
                                                 answer: @"4"] ; //
         Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?" //

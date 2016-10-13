@@ -10,8 +10,8 @@
 
 @interface Flashcard : NSObject
 
-@property (readonly) NSString * question;
-@property (readonly) NSString * answer;
+@property (strong, nonatomic, readonly) NSString * question;
+@property (strong, nonatomic, readonly) NSString * answer;
 @property BOOL isFavorite;
 
 - (instancetype) initWithQuestion: (NSString *) question

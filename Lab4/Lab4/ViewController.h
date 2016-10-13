@@ -17,5 +17,9 @@
 @property (nonatomic, strong) UISwipeGestureRecognizer* doubleTap;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
+// helper methods
+- (void) animateFadeIn: (NSString *) str;
+- (void) animateFadeOut: (NSString *) str;
+
 @end
 
