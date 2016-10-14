@@ -11,11 +11,13 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+@property BOOL answerShown;
 
 @property (nonatomic, strong) UISwipeGestureRecognizer* leftSwipeGesture;
 @property (nonatomic, strong) UISwipeGestureRecognizer* rightSwipeGesture;
 @property (nonatomic, strong) UISwipeGestureRecognizer* doubleTap;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
+
 
 // helper methods
 - (void) animateFadeIn: (NSString *) str;

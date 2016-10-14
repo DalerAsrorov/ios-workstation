@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _answerShown = false;
+    
     // initializing model
     model = [FlashcardsModel sharedModel];
     Flashcard *randomFlashcard = [model randomFlashcard];
@@ -60,19 +62,41 @@
 - (void) handleSwipes: (UISwipeGestureRecognizer *) sender {
     if(sender.direction == UISwipeGestureRecognizerDirectionLeft)
     {
-        _questionLabel.text = model.prevFlashcard.question;
+        NSLog(@"\nSwiped left, current index %i\n", model.currentIndex);
+        
+        if(model.currentIndex == model.numberOfFlashcards - 1) {
+            _questionLabel.text = [model flashcardAtIndex:0].question;
+        } else {
+            _questionLabel.text = model.nextFlashcard.question;
+        }
+        
     }
     if(sender.direction == UISwipeGestureRecognizerDirectionRight)
     {
-        _questionLabel.text = model.nextFlashcard.question;
+        if(model.currentIndex == 0) {
+            _questionLabel.text = [model flashcardAtIndex:model.numberOfFlashcards - 1].question;
+        } else {
+            _questionLabel.text = model.prevFlashcard.question;
+        }
     }
 }
 
 - (void) handleTwoTaps: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         Flashcard *curFlash = [model flashcardAtIndex: model.currentIndex];
-        [self animateFadeOut: curFlash.question];
-        [self animateFadeIn: curFlash.answer];
+        NSLog(@"Start animating fade out and fade in.");
+        NSLog(@"Boolean value is %i", _answerShown);
+        
+        if(_answerShown == false) {
+            NSLog(@"\n should show answer");
+            [self animateFadeOut: curFlash.answer];
+            _answerShown = true;
+        } else if (_answerShown == true) {
+            NSLog(@"\n should show question");
+            [self animateFadeOut: curFlash.question];
+            _answerShown = false;
+            
+        }
     }
 }
 
@@ -89,7 +113,7 @@
     _questionLabel.text = str;
     
     // switch colors
-    if(_questionLabel.textColor == UIColor.blackColor) {
+    if(_questionLabel.textColor == UIColor.blackColor || _questionLabel.textColor == UIColor.whiteColor) {
         _questionLabel.textColor = [UIColor colorWithRed: (153.0f/255.0f) green: 0.0 blue: 0.0 alpha: 1.0];
     } else {
         _questionLabel.textColor = UIColor.blackColor;
