@@ -81,16 +81,16 @@
         NSLog(@"Start animating fade out and fade in.");
         NSLog(@"Boolean value is %i", _answerShown);
         
-//        if(_answerShown == false) {
-//            NSLog(@"\n should show answer");
+        if(_answerShown == false) {
+            NSLog(@"\n should show answer");
             [self animateFadeOut: curFlash.answer];
-//            _answerShown = true;
-//        } else if (_answerShown == true) {
-//            NSLog(@"\n should show question");
-//            [self animateFadeOut: curFlash.question];
-//            _answerShown = false;
-//            
-//        }
+            _answerShown = true;
+        } else if (_answerShown == true) {
+            NSLog(@"\n should show question");
+            [self animateFadeOut: curFlash.question];
+            _answerShown = false;
+            
+        }
     }
 }
 
