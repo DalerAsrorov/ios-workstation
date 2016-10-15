@@ -25,31 +25,25 @@
     // initializing model
     model = [FlashcardsModel sharedModel];
     Flashcard *randomFlashcard = [model randomFlashcard];
-    NSString * currentQuestion = randomFlashcard.question;
-    NSString * currentAnswer = randomFlashcard.answer;
-    _questionLabel.text = currentQuestion;
+    _questionLabel.text = randomFlashcard.question;
     
     
     self.leftSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:) ];
     self.rightSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:) ];
-    
-
-    
     self.leftSwipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     self.rightSwipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoTaps:)];
-    tapGesture.numberOfTapsRequired = 2;
-    
-    UITapGestureRecognizer *oneTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleOneTap:)];
-    tapGesture.numberOfTapsRequired = 1;
-    
-    
     [self.view addGestureRecognizer: self.leftSwipeGesture];
     [self.view addGestureRecognizer: self.rightSwipeGesture];
-    [self.view addGestureRecognizer:tapGesture];
-//    [self.view addGestureRecognizer:oneTapGesture];
     
+    _singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doSingleTap:)];
+    _singleTap.numberOfTapsRequired = 1;
+    [self.view addGestureRecognizer:_singleTap];
+    
+    _doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doDoubleTap:)];
+    _doubleTap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:_doubleTap];
+    
+    [_singleTap requireGestureRecognizerToFail:_doubleTap];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -81,31 +75,28 @@
     }
 }
 
-- (void) handleTwoTaps: (UITapGestureRecognizer *) sender {
+- (void) doDoubleTap: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
         Flashcard *curFlash = [model flashcardAtIndex: model.currentIndex];
         NSLog(@"Start animating fade out and fade in.");
         NSLog(@"Boolean value is %i", _answerShown);
         
-        if(_answerShown == false) {
-            NSLog(@"\n should show answer");
+//        if(_answerShown == false) {
+//            NSLog(@"\n should show answer");
             [self animateFadeOut: curFlash.answer];
-            _answerShown = true;
-        } else if (_answerShown == true) {
-            NSLog(@"\n should show question");
-            [self animateFadeOut: curFlash.question];
-            _answerShown = false;
-            
-        }
+//            _answerShown = true;
+//        } else if (_answerShown == true) {
+//            NSLog(@"\n should show question");
+//            [self animateFadeOut: curFlash.question];
+//            _answerShown = false;
+//            
+//        }
     }
 }
 
-- (void) handleOneTap: (UITapGestureRecognizer *) sender {
+- (void) doSingleTap: (UITapGestureRecognizer *) sender {
     if (sender.state == UIGestureRecognizerStateRecognized) {
-        Flashcard *card = [model randomFlashcard];
-        
-        
-        
+        _questionLabel.text = [model randomFlashcard].question;
     }
 }
 

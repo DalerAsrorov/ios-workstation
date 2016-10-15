@@ -13,15 +13,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property BOOL answerShown;
 
-@property (nonatomic, strong) UISwipeGestureRecognizer* leftSwipeGesture;
-@property (nonatomic, strong) UISwipeGestureRecognizer* rightSwipeGesture;
-@property (nonatomic, strong) UISwipeGestureRecognizer* doubleTap;
-@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
+@property (strong) UISwipeGestureRecognizer* leftSwipeGesture;
+@property UISwipeGestureRecognizer* rightSwipeGesture;
+@property UITapGestureRecognizer *tapGesture;
 
+
+@property  UITapGestureRecognizer *singleTap;
+@property  UITapGestureRecognizer *doubleTap;
 
 // helper methods
 - (void) animateFadeIn: (NSString *) str;
 - (void) animateFadeOut: (NSString *) str;
+- (void) doSingleTap: (UITapGestureRecognizer *) sender;
+- (void) doDoubleTap: (UITapGestureRecognizer *) sender;
 
 @end
 
