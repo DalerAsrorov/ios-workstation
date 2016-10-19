@@ -57,6 +57,17 @@
     XCTAssertEqual([_model flashcardAtIndex:0].isFavorite, true);
 }
 
+// tests if toggleFavorites method changes
+// current favorite status of the flashcard
+- (void) testToggleFavorites {
+    [_model flashcardAtIndex:2];
+    [_model toggleFavorite];
+    Flashcard *flashcardThree = [_model flashcardAtIndex:2];
+    XCTAssertEqual(flashcardThree.isFavorite, true);
+}
+
+
+
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.

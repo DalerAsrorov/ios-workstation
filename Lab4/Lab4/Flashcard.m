@@ -18,14 +18,6 @@
 
 @implementation Flashcard
 
-//- (instancetype) init: (Flashcard *) obj {
-//    if (self = [super initWithFrame:CGRectZero]) {
-//        obj = obj;
-//        // do the majority of initializing things
-//    }
-//    return self;
-//}
-
 - (instancetype) initWithQuestion:(NSString *)question
                            answer:(NSString *)ans
 {

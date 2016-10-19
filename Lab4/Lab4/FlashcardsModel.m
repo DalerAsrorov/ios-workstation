@@ -74,15 +74,13 @@
     if(index > (self.flashcards.count - 1)) {
         NSLog(@"Wrong index. Should be between 0 and 4");
         return nil;
+    } else {
+        _currentIndex = (uint32_t)index;
+        return self.flashcards[index];
     }
-    
-    // setting current index to that number
-    _currentIndex = (uint32_t)index;
-    
-    return self.flashcards[index];
 }
 
-// Accessing a flashcard – sets currentIndex appropriately
+// Return next flash card
 - (Flashcard *) nextFlashcard {
     NSUInteger currentIndex = self.currentIndex;
     if(currentIndex == self.flashcards.count - 1) {
@@ -91,8 +89,6 @@
     }
     
     uint32_t newIndex = (uint32_t)currentIndex + 1;
-    
-    // setting current index to the appropriate number
     _currentIndex = newIndex;
     
     return self.flashcards[newIndex];
@@ -107,8 +103,6 @@
     }
     
     uint32_t newIndex = (uint32_t)currentIndex - 1;
-    
-    // setting current index to the appropriate number
     _currentIndex = newIndex;
     
     return self.flashcards[newIndex];
@@ -133,10 +127,10 @@
                     atIndex: (NSUInteger) index {
     if(!(index <= self.flashcards.count)) {
         NSLog(@"index is bigger than the number of flashcards in the array.");
+    } else {
+        Flashcard *newFlashcard = [[Flashcard alloc] initWithQuestion: question answer: ans isFavorite: fav];
+        [self.flashcards insertObject:newFlashcard atIndex:index];
     }
-    
-    Flashcard *newFlashcard = [[Flashcard alloc] initWithQuestion: question answer: ans isFavorite: fav];
-    [self.flashcards insertObject:newFlashcard atIndex:index];
 }
 
 // Removing a flashcard without index.
