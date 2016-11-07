@@ -1,35 +1,27 @@
 //
-//  MyTableViewController.m
+//  AddViewController.m
 //  Lab4
 //
 //  Created by Daler Asrorov on 11/6/16.
 //  Copyright © 2016 Daler Asrorov. All rights reserved.
 //
 
-#import "MyTableViewController.h"
-#import "FlashcardsModel.h"
+#import "AddViewController.h"
 
-@interface MyTableViewController ()
-
-@property FlashcardsModel *model;
+@interface AddViewController ()
 
 @end
 
-@implementation MyTableViewController
+@implementation AddViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.model = [FlashcardsModel sharedModel];
-    
-    
-    
-    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,31 +33,23 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    
-    return [self.model numberOfFlashcards];
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cardCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
-
-    NSString *question = [self.model flashcardAtIndex: indexPath.row].question; // getting question NSString
-    NSString *answer = [self.model flashcardAtIndex: indexPath.row].answer; // getting answer NSString
-    cell.textLabel.text = question;
-    cell.detailTextLabel.text = answer;
-    
     
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
