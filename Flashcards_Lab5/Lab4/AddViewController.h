@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^AddFlashcardCompletionHandler) (NSString *question, NSString *answer);
+
 @interface AddViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigation;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+@property (copy, nonatomic) AddFlashcardCompletionHandler flashcardCompletionHandler;
+
 
 - (void) enableSaveButton: (NSString *) questionText answer: (NSString *) answerText;
 
