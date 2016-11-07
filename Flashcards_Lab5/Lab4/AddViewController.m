@@ -24,6 +24,16 @@
 
 }
 
+- (void) hideKeyboards {
+    [_textField resignFirstResponder];
+    [_textView resignFirstResponder];
+}
+
+- (void) nullAllText {
+    _textView.text = @"";
+    _textField.text = @"";
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_textField resignFirstResponder];
     [_textView resignFirstResponder];
@@ -47,12 +57,42 @@
     
 }
 
-//- (void) textViewDidBeginEditing:(UITextView *) textView {
-//    
-//    
-//    NSLog(@"did begin editing");
-//}
+- (IBAction)saveButtonTapped:(id)sender {
+    [self hideKeyboards];
+    
+    NSLog(@"textFieldShouldReturn returned...");
+    
+    if(self.flashcardCompletionHandler) {
+        NSLog(@"question %@, and answer %@", _textView.text, _textField.text);
+        _flashcardCompletionHandler(_textView.text, _textField.text);
+    }
 
+    [self nullAllText];
+}
+- (IBAction)cancelButtonTapped:(id)sender {
+    [self hideKeyboards];
+    
+
+    if(self.flashcardCompletionHandler) {
+        self.flashcardCompletionHandler(nil, nil);
+    }
+
+    [self nullAllText];
+}
+
+- (BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [self hideKeyboards];
+    
+    if(self.flashcardCompletionHandler) {
+        NSLog(@"question %@, and answer %@", _textView.text, _textField.text);
+        _flashcardCompletionHandler(_textView.text, _textField.text);
+    }
+    
+    NSLog(@"textFieldShouldReturn returned...");
+    [self nullAllText];
+    
+    return YES;
+}
 
 
 /*

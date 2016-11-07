@@ -111,7 +111,7 @@
                     <navigationItem key="navigationItem" id="aYF-ka-KVh">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="McX-Sw-n3Q">
                             <connections>
-                                <segue destination="owL-6g-nxL" kind="show" id="n2Z-tn-Ppz"/>
+                                <segue destination="owL-6g-nxL" kind="presentation" id="zQG-Du-BTV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -153,8 +153,16 @@
                                 <color key="backgroundColor" red="0.96922779079999999" green="0.64066868610000005" blue="0.53474588030000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Add" id="3M7-RB-xLU">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="rfp-KI-aLN"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="V2y-yG-DIk"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="rfp-KI-aLN">
+                                            <connections>
+                                                <action selector="cancelButtonTapped:" destination="owL-6g-nxL" id="Pkd-Wf-7rI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="V2y-yG-DIk">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="owL-6g-nxL" id="mu3-v6-cbW"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

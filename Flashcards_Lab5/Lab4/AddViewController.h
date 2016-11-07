@@ -10,6 +10,8 @@
 
 typedef void(^AddFlashcardCompletionHandler) (NSString *question, NSString *answer);
 
+
+
 @interface AddViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
@@ -20,6 +22,10 @@ typedef void(^AddFlashcardCompletionHandler) (NSString *question, NSString *answ
 
 
 - (void) enableSaveButton: (NSString *) questionText answer: (NSString *) answerText;
+- (IBAction)saveButtonTapped:(id)sender;
+- (IBAction)cancelButtonTapped:(id)sender;
+- (void) hideKeyboards;
+- (void) nullAllText;
 
 @end
 

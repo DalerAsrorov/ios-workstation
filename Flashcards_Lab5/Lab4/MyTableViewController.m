@@ -8,6 +8,7 @@
 
 #import "MyTableViewController.h"
 #import "FlashcardsModel.h"
+#import "AddViewController.h"
 
 @interface MyTableViewController ()
 
@@ -101,14 +102,23 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
+    AddViewController *addFlashcardVC = segue.destinationViewController;
+    addFlashcardVC.flashcardCompletionHandler = ^(NSString *question, NSString *answer) {
+        if(question != nil) {
+            [self.model insertWithQuestion: question answer: answer favorite: false];
+            [self.tableView reloadData];
+        }
+        [self dismissViewControllerAnimated:YES completion: nil];
+    };
+    
 }
-*/
+
 
 @end
