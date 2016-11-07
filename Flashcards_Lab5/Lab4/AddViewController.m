@@ -20,7 +20,13 @@
     // Additions
     [_textView setDelegate: self];
     [_textField setDelegate: self];
+    _saveButton.enabled = false;
 
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_textField resignFirstResponder];
+    [_textView resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,10 +34,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) textViewDidBeginEditing:(UITextView *) textView {
-    
-    NSLog(@"did begin editing");
+- (void) enableSaveButton: (NSString *) questionText answer: (NSString *) answerText {
+    _saveButton.enabled = (questionText.length > 0 && answerText.length > 0);
 }
+
+- (BOOL) textField: (UITextField *) textField shouldChangeCharactersInRange: (NSRange) range replacementString: (NSString *) string {
+    NSString *changeString = [textField.text stringByReplacingCharactersInRange: range withString: string];
+    [self enableSaveButton: self.textView.text answer: changeString];
+    
+    //
+    return YES;
+    
+}
+
+//- (void) textViewDidBeginEditing:(UITextView *) textView {
+//    
+//    
+//    NSLog(@"did begin editing");
+//}
+
+
+
 /*
 #pragma mark - Navigation
 

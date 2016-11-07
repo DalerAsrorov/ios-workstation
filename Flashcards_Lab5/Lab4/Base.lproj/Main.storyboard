@@ -183,6 +183,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="navigation" destination="xfJ-Fh-Zbk" id="cLi-49-eOI"/>
+                        <outlet property="saveButton" destination="V2y-yG-DIk" id="UjG-3j-dby"/>
                         <outlet property="textField" destination="Juk-6g-DsZ" id="2sz-Am-5Np"/>
                         <outlet property="textView" destination="yrq-YP-D7x" id="0CI-W6-nHj"/>
                     </connections>

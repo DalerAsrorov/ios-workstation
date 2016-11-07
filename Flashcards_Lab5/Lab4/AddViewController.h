@@ -12,6 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigation;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
+- (void) enableSaveButton: (NSString *) questionText answer: (NSString *) answerText;
 
 @end
+
