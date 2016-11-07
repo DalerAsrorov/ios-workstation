@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C227E3B1DD0880000F166C9 /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C227E3A1DD0880000F166C9 /* cards.plist */; };
 		3C43D99D1DAA2D7E00E9A115 /* Flashcard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43D99C1DAA2D7E00E9A115 /* Flashcard.m */; };
 		3C64A3CA1DAB1611003CE370 /* FlashcardsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C64A3C91DAB1611003CE370 /* FlashcardsModel.m */; };
 		3C64A3CB1DAB1611003CE370 /* FlashcardsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C64A3C91DAB1611003CE370 /* FlashcardsModel.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C227E3A1DD0880000F166C9 /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cards.plist; sourceTree = "<group>"; };
 		3C43D99B1DAA2D7E00E9A115 /* Flashcard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flashcard.h; sourceTree = "<group>"; };
 		3C43D99C1DAA2D7E00E9A115 /* Flashcard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flashcard.m; sourceTree = "<group>"; };
 		3C64A3C81DAB1611003CE370 /* FlashcardsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashcardsModel.h; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		3C916DBB1DAA2957002FC3EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C227E3A1DD0880000F166C9 /* cards.plist */,
 				3C916DBC1DAA2957002FC3EC /* main.m */,
 			);
 			name = "Supporting Files";
@@ -355,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C227E3B1DD0880000F166C9 /* cards.plist in Resources */,
 				3C916DCB1DAA2958002FC3EC /* Assets.xcassets in Resources */,
 				3C916DC61DAA2957002FC3EC /* Main.storyboard in Resources */,
 			);
