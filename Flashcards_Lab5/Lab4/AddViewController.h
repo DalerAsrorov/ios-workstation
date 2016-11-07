@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddViewController : UIViewController<UITextFieldDelegate, UITextViewDelegate>
+@interface AddViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 
 @end

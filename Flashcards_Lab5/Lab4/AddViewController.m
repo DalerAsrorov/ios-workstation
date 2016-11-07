@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Additions
+    [_textView setDelegate: self];
+    [_textField setDelegate: self];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,13 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    NSLog(@"started typing...");
+- (void) textViewDidBeginEditing:(UITextView *) textView {
     
-    return true;
+    NSLog(@"did begin editing");
 }
-
 /*
 #pragma mark - Navigation
 
