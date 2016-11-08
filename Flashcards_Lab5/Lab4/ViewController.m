@@ -11,7 +11,7 @@
 @interface ViewController () {
     FlashcardsModel *model;
     
-}
+};
 
 @end
 
@@ -20,13 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _answerShown = false;
-    
     // initializing model
     model = [FlashcardsModel sharedModel];
+    
+    NSLog(@"loading ");
+    
     Flashcard *randomFlashcard = [model randomFlashcard];
     _questionLabel.text = randomFlashcard.question;
-    
+    _answerShown = false;
     
     self.leftSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:) ];
     self.rightSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipes:) ];
@@ -47,6 +48,22 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (![model numberOfFlashcards]) {
+        _questionLabel.text = @"";
+        _singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doSingleTapNoCards:)];
+        _singleTap.numberOfTapsRequired = 1;
+        [self.view addGestureRecognizer:_singleTap];
+        _doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doDoubleTapNoCards:)];
+        _doubleTap.numberOfTapsRequired = 2;
+        [self.view addGestureRecognizer:_doubleTap];
+        
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -72,6 +89,20 @@
         } else {
             _questionLabel.text = model.prevFlashcard.question;
         }
+    }
+}
+
+- (void) doSingleTapNoCards: (UITapGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        _questionLabel.text = @"There are no more flashcards.";
+        _questionLabel.textColor = [UIColor colorWithRed: (153.0f/255.0f) green: 0.0 blue: 0.0 alpha: 1.0];
+    }
+}
+
+- (void) doDoubleTapNoCards: (UITapGestureRecognizer *) sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        _questionLabel.text = @"Please add some flashcards.";
+        _questionLabel.textColor = UIColor.whiteColor;
     }
 }
 
@@ -128,6 +159,19 @@
             [self animateFadeIn: str];
         }
     ];
+}
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    NSLog(@"View controller %@", viewController);
+    
+    if (viewController == [tabBarController selectedViewController]) {
+        
+        NSLog(@"somewhere now");
+        return NO;
+    }
+    NSLog(@"somewhere now");
+    
+    return YES;
 }
 
 @end

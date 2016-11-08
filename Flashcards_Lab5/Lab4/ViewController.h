@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "FlashcardsModel.h"
 
-@interface ViewController : UIViewController
+static int counter = 0;
+
+@interface ViewController : UIViewController <UITabBarControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *questionLabel;
 @property BOOL answerShown;
 
@@ -26,6 +29,8 @@
 - (void) animateFadeOut: (NSString *) str;
 - (void) doSingleTap: (UITapGestureRecognizer *) sender;
 - (void) doDoubleTap: (UITapGestureRecognizer *) sender;
+- (void) doSingleTapNoCards: (UITapGestureRecognizer *) sender;
+- (void) doDoubleTapNoCards: (UITapGestureRecognizer *) sender;
 
 @end
 

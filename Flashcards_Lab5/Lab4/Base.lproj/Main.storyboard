@@ -109,7 +109,7 @@
                         <barButtonItem title="Item" id="NOz-Gt-isO"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="aYF-ka-KVh">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="McX-Sw-n3Q">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="McX-Sw-n3Q">
                             <connections>
                                 <segue destination="owL-6g-nxL" kind="presentation" id="zQG-Du-BTV"/>
                             </connections>
@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yrq-YP-D7x">
-                                <rect key="frame" x="31" y="312" width="313" height="242"/>
+                                <rect key="frame" x="31" y="356" width="313" height="242"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="242" id="Z0o-ZO-1oe"/>
@@ -143,13 +143,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type answer..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Juk-6g-DsZ">
-                                <rect key="frame" x="31" y="570" width="313" height="30"/>
+                                <rect key="frame" x="31" y="614" width="313" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfJ-Fh-Zbk">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.96922779079999999" green="0.64066868610000005" blue="0.53474588030000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Add" id="3M7-RB-xLU">

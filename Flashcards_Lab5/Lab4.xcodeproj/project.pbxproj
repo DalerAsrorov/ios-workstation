@@ -13,6 +13,7 @@
 		3C64A3CC1DAB1611003CE370 /* FlashcardsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C64A3C91DAB1611003CE370 /* FlashcardsModel.m */; };
 		3C64A3D41DAF9F11003CE370 /* MyLab4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C64A3D31DAF9F11003CE370 /* MyLab4Tests.m */; };
 		3C64A3DC1DAF9F70003CE370 /* FlashcardModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C64A3DB1DAF9F70003CE370 /* FlashcardModelTests.m */; };
+		3C77CEF51DD1B99800B687A1 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C77CEF41DD1B99800B687A1 /* TabBarController.m */; };
 		3C916DBD1DAA2957002FC3EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C916DBC1DAA2957002FC3EC /* main.m */; };
 		3C916DC01DAA2957002FC3EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C916DBF1DAA2957002FC3EC /* AppDelegate.m */; };
 		3C916DC31DAA2957002FC3EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C916DC21DAA2957002FC3EC /* ViewController.m */; };
@@ -59,6 +60,8 @@
 		3C64A3D31DAF9F11003CE370 /* MyLab4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLab4Tests.m; sourceTree = "<group>"; };
 		3C64A3D51DAF9F11003CE370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C64A3DB1DAF9F70003CE370 /* FlashcardModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashcardModelTests.m; sourceTree = "<group>"; };
+		3C77CEF31DD1B99800B687A1 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3C77CEF41DD1B99800B687A1 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		3C916DB81DAA2957002FC3EC /* Lab4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C916DBC1DAA2957002FC3EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C916DBE1DAA2957002FC3EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				3C916DCF1DAA2958002FC3EC /* Info.plist */,
 				3C916DC71DAA2957002FC3EC /* Lab4.xcdatamodeld */,
 				3C916DBB1DAA2957002FC3EC /* Supporting Files */,
+				3C77CEF31DD1B99800B687A1 /* TabBarController.h */,
+				3C77CEF41DD1B99800B687A1 /* TabBarController.m */,
 			);
 			path = Lab4;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				3C916DC91DAA2957002FC3EC /* Lab4.xcdatamodeld in Sources */,
 				3C43D99D1DAA2D7E00E9A115 /* Flashcard.m in Sources */,
 				3C916DC31DAA2957002FC3EC /* ViewController.m in Sources */,
+				3C77CEF51DD1B99800B687A1 /* TabBarController.m in Sources */,
 				3C916DC01DAA2957002FC3EC /* AppDelegate.m in Sources */,
 				3C939DE61DD00026002382A8 /* MyTableViewController.m in Sources */,
 				3C64A3CA1DAB1611003CE370 /* FlashcardsModel.m in Sources */,

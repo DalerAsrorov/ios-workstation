@@ -25,7 +25,9 @@ static NSString *const fileName = @"Cards.plist";
         _filepath = [NSString stringWithFormat: @"%@/%@", documentsDirectory, fileName];
         NSMutableArray *cards = [NSMutableArray arrayWithContentsOfFile: _filepath];
         
-        if(!cards) {
+        NSLog(@"Check here first ");
+        
+        if(!cards || !cards.count) {
             Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
                                                             answer: @"Yes" isFavorite: true];
             Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
