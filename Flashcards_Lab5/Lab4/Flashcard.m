@@ -44,5 +44,33 @@
     return self;
 }
 
+- (instancetype) initWithDictionary: (NSDictionary *) card {
+    self = [super init];
+    if (self) {
+        BOOL fav = NO;
+        NSString* favString = [card valueForKey: kFavKey];
+        if ([favString isEqualToString:kFavoriteYes]) {
+            fav = YES;
+        }
+        
+        _question = [card valueForKey: kQuestionKey];
+        _answer = [card valueForKey: kAnswerKey];
+        _isFavorite = fav;
+    }
+    return self;
+}
+
+- (NSDictionary *) dictionary {
+    NSString* favorite = kFavoriteNo;
+    if (self.isFavorite) {
+        favorite = kFavoriteYes;
+    }
+    NSDictionary *card = [NSDictionary dictionaryWithObjectsAndKeys:
+                          self.question, kQuestionKey,
+                          self.answer, kAnswerKey,
+                          favorite, kFavKey, nil];
+    return card;
+}
+
 
 @end

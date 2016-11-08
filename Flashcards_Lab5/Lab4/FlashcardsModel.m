@@ -7,11 +7,12 @@
 //
 
 #import "FlashcardsModel.h"
-
+static NSString *const fileName = @"Cards.plist";
 @interface FlashcardsModel()
 
 @property (nonatomic, strong) NSMutableArray *flashcards;
 @property (readwrite) unsigned int currentIndex;
+@property (strong, nonatomic) NSString *filepath;
 
 @end
 
@@ -19,22 +20,38 @@
 
 - (instancetype) init {
     if(self = [super init]) {
-        // creating 5 Flashcard class instances.
-        Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
-                                                        answer: @"Yes" isFavorite: true];
-        Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
-                                                answer: @"4"] ; //
-        Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?" //
-                                                answer: @"Neil Armstrong"];
-        Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?" //
-                                                answer: @"No."];
-        Flashcard *card5 = [[Flashcard alloc] initWithQuestion: @"What's the first programming language I learned?"
-                                                answer: @"Java"];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        _filepath = [NSString stringWithFormat: @"%@/%@", documentsDirectory, fileName];
+        NSMutableArray *cards = [NSMutableArray arrayWithContentsOfFile: _filepath];
         
-        // placing the 5 created objects into mutable array
-        _flashcards = [[NSMutableArray alloc] initWithObjects: card1, card2, card3, card4, card5, nil];
+        if(!cards) {
+            Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
+                                                            answer: @"Yes" isFavorite: true];
+            Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
+                                                            answer: @"4"] ; //
+            Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?" //
+                                                            answer: @"Neil Armstrong"];
+            Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?" //
+                                                            answer: @"No."];
+            Flashcard *card5 = [[Flashcard alloc] initWithQuestion: @"What's the first programming language I learned?"
+                                                            answer: @"Java"];
+            _flashcards = [[NSMutableArray alloc] initWithObjects: card1, card2, card3, card4, card5, nil];
+            
+            NSLog(@"Before save %@", _flashcards);
+            
+            [self save];
+        } else {
+            _flashcards = [[NSMutableArray alloc] init];
+            NSDictionary* card;
+            Flashcard* flashcard;
+            
+            for (card in cards) {
+                flashcard = [[Flashcard alloc] initWithDictionary: card];
+                [_flashcards addObject: flashcard];
+            }
+        }
         
-        // setting current index to 0
         _currentIndex = 0;
     }
     
@@ -57,6 +74,33 @@
 - (NSUInteger) numberOfFlashcards {
     return [self.flashcards count];
 }
+
+//- (NSMutableArray *) flashcards {
+//    if(!_flashcards) {
+//        NSMutableArray *storedFlashcards = [[NSUserDefaults standardUserDefaults] objectForKey: flashArrayKey];
+//        
+//        if(storedFlashcards) {
+//            _flashcards = [storedFlashcards mutableCopy];
+//        } else {
+//            
+//            Flashcard *card1 = [[Flashcard alloc] initWithQuestion: @"Is Objective-C object-oriented Language?" //
+//                                                            answer: @"Yes" isFavorite: true];
+//            Flashcard *card2 = [[Flashcard alloc] initWithQuestion: @"What's 2 times 2?"
+//                                                            answer: @"4"] ; //
+//            Flashcard *card3 = [[Flashcard alloc] initWithQuestion: @"Who's the first person to land on the moon?" //
+//                                                            answer: @"Neil Armstrong"];
+//            Flashcard *card4 = [[Flashcard alloc] initWithQuestion: @"Are Swift and Objective-C both created by Apple?" //
+//                                                            answer: @"No."];
+//            Flashcard *card5 = [[Flashcard alloc] initWithQuestion: @"What's the first programming language I learned?"
+//                                                            answer: @"Java"];
+//            
+//            // placing the 5 created objects into mutable array
+//            _flashcards = [[NSMutableArray alloc] initWithObjects: card1, card2, card3, card4, card5, nil];
+//        }
+//    }
+//    
+//    return _flashcards;
+//}
 
 // Accessing a flashcard – sets currentIndex appropriately
 - (Flashcard *) randomFlashcard {
@@ -179,6 +223,15 @@
     arrayOfFlashcards = [tempMutArray copy];
     
     return arrayOfFlashcards;
+}
+
+- (void) save {
+    NSMutableArray* cards = [[NSMutableArray alloc] init];
+    Flashcard* card;
+    for (card in self.flashcards) {
+        [cards addObject: [card dictionary]];
+    }
+    [cards writeToFile: _filepath atomically:YES];
 }
 
 @end

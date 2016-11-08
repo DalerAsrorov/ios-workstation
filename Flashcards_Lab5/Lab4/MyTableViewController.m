@@ -23,9 +23,6 @@
     self.model = [FlashcardsModel sharedModel];
     
     
-    
-    
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -68,13 +65,13 @@
 }
 
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
+
 
 /*
 // Override to support editing the table view.
@@ -106,13 +103,14 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+// Store data here (?)
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     Get the new view controller using [segue destinationViewController].
-//     Pass the selected object to the new view controller.
+    
     AddViewController *addFlashcardVC = segue.destinationViewController;
     addFlashcardVC.flashcardCompletionHandler = ^(NSString *question, NSString *answer) {
         if(question != nil) {
             [self.model insertWithQuestion: question answer: answer favorite: false];
+            [self.model save];
             [self.tableView reloadData];
         }
         [self dismissViewControllerAnimated:YES completion: nil];

@@ -44,6 +44,10 @@
 // Getting the favorite flashcards
 - (NSArray *) favoriteFlashcards;
 
+// method for saving files
+- (void) save;
+
+
 @end
 
 

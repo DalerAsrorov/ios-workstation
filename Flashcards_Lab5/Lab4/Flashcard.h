@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+// constants
+static NSString * const kQuestionKey = @"question";
+static NSString * const kAnswerKey = @"answer";
+static NSString * const kFavKey = @"fav";
+static NSString * const kFavoriteYes = @"yes";
+static NSString * const kFavoriteNo = @"no";
+
 @interface Flashcard : NSObject
 
 @property (strong, nonatomic, readonly) NSString * question;
@@ -19,5 +26,10 @@
 - (instancetype) initWithQuestion: (NSString *) question
                            answer: (NSString *) ans
                        isFavorite: (BOOL) isFav;
+
+// public properties
+// public methods
+- (instancetype) initWithDictionary: (NSDictionary *) card;
+- (NSDictionary *) dictionary;
 
 @end
