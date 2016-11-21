@@ -1,12 +1,8 @@
 //
 //  AppDelegate.h
-//  Lab4
+//  Lab6
 //
-//
-//  Used 3-day extension for this assignment.
-//
-//
-//  Created by Daler Asrorov on 10/9/16.
+//  Created by Daler Asrorov on 11/20/16.
 //  Copyright © 2016 Daler Asrorov. All rights reserved.
 //
 

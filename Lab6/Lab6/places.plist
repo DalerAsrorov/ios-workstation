@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Pamir</string>
+		<key>website</key>
+		<string>http://www.pamirs.org/</string>
+		<key>image</key>
+		<string>pamir.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Washington DC</string>
+		<key>website</key>
+		<string>https://washington.org/</string>
+		<key>image</key>
+		<string>dc.jpg</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>http://zoo.sandiegozoo.org/</string>
+		<key>name</key>
+		<string>San Diego Zoo</string>
+		<key>image</key>
+		<string>sandiegozoo.jpg</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>http://www.griffithobservatory.org/</string>
+		<key>name</key>
+		<string>Griffith Observatory</string>
+		<key>image</key>
+		<string>griffith.jpg</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>http://www.moscow.info/red-square</string>
+		<key>image</key>
+		<string>redsquare.jpg</string>
+		<key>name</key>
+		<string>Red Square</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>http://www.saint-petersburg.com/peterhof/</string>
+		<key>name</key>
+		<string>Peterhof Palace</string>
+		<key>image</key>
+		<string>peterhof.jpg</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>https://www.nps.gov/yose/index.htm</string>
+		<key>name</key>
+		<string>Yosemite</string>
+		<key>image</key>
+		<string>yosemite.jpeg</string>
+	</dict>
+	<dict>
+		<key>website</key>
+		<string>http://www.cityofredlands.org/</string>
+		<key>name</key>
+		<string>Redlands</string>
+		<key>image</key>
+		<string>redlands.jpg</string>
+	</dict>
+</array>
+</plist>

@@ -2,6 +2,10 @@
 //  FlashcardsModel.m
 //  Lab4
 //
+//
+//  Used 3-day extension for this assignment.
+//
+//
 //  Created by Daler Asrorov on 10/9/16.
 //  Copyright © 2016 Daler Asrorov. All rights reserved.
 //
