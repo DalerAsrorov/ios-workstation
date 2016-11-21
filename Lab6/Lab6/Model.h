@@ -10,6 +10,10 @@
 
 @interface Model : NSObject
 
+// Creating the model
++ (instancetype) sharedModel;
+
+- (NSUInteger) numberOfPlaces;
 
 
 @end

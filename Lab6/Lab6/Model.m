@@ -16,16 +16,35 @@
 
 @implementation Model
 
--(instancetype) init {
+- (instancetype) init {
     if(self = [super init]) {
         NSString *path = [[NSBundle mainBundle] pathForResource: @"places" ofType:@"plist"];
         _places = [[NSMutableArray alloc] initWithContentsOfFile:path];
         
-        NSLog(@"Objects %@", _places);
+        NSLog(@"Places array: %@", _places);
         
     }
     
     return self;
 }
+
+// Creating the model
++ (instancetype) sharedModel {
+    static Model *_sharedModel = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedModel = [[Model alloc] init];
+    });
+    
+    return _sharedModel;
+}
+
+// Accessing number of flashcards in model
+- (NSUInteger) numberOfPlaces {
+    return [_places count];
+}
+
+
 
 @end
