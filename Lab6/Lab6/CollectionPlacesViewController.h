@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CollectionPlacesViewController : UICollectionViewController
+@interface CollectionPlacesViewController : UICollectionViewController  <UICollectionViewDelegate, UITextViewDelegate, UITextFieldDelegate>
+
 
 @end

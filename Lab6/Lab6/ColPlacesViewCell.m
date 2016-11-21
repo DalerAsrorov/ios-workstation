@@ -7,7 +7,16 @@
 //
 
 #import "ColPlacesViewCell.h"
+#import "Model.h"
 
-@implementation ColPlacesViewCell
+@implementation ColPlacesViewCell 
+
+- (void) setUpCell:(NSDictionary *) placeDict {
+    NSString *name =  placeDict[@"name"];
+    NSString *img = placeDict[@"image"];
+    
+    _placeImg.image = [UIImage imageNamed:img];
+    _placeNameLabel.text = name;
+}
 
 @end

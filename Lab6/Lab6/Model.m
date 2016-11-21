@@ -45,6 +45,15 @@
     return [_places count];
 }
 
+- (NSDictionary *) placeAtIndex: (NSUInteger) index {
+    if(index > _places.count - 1) {
+        NSLog(@"Wrong index. Should be between 0 and %lu", _places.count - 1);
+        return nil;
+    } else {
+        return _places[index];
+    }
+}
+
 
 
 @end

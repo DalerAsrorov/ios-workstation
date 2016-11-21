@@ -14,6 +14,7 @@
 + (instancetype) sharedModel;
 
 - (NSUInteger) numberOfPlaces;
+- (NSDictionary *) placeAtIndex: (NSUInteger) index;
 
 
 @end

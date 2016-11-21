@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColPlacesViewCell : UICollectionViewCell
+@interface ColPlacesViewCell : UICollectionViewCell<UITextViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *placeImg;
+@property (weak, nonatomic) IBOutlet UILabel *placeNameLabel;
+
+- (void) setUpCell: (NSDictionary *) placeDict;
 
 @end
+
+

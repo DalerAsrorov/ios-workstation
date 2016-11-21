@@ -6,18 +6,24 @@
 //  Copyright © 2016 Daler Asrorov. All rights reserved.
 //
 
+#import "Model.h"
+#import "CollectionViewCell.h"
 #import "CollectionPlacesViewController.h"
 
 @interface CollectionPlacesViewController ()
+
+@property Model *model;
 
 @end
 
 @implementation CollectionPlacesViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"PlaceCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _model = [Model sharedModel];
+    
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -47,19 +53,24 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 0;
+    return [_model numberOfPlaces];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    NSDictionary *currentDict = [_model placeAtIndex: indexPath.row];
+    
+    [cell.placeName setText:@"Value"];
     
     return cell;
 }

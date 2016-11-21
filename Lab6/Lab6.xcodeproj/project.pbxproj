@@ -27,7 +27,7 @@
 		3C452DF31DE2D6CA00A9C498 /* redlands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DF21DE2D6CA00A9C498 /* redlands.jpg */; };
 		3C452DF71DE2D76300A9C498 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF61DE2D76300A9C498 /* Model.m */; };
 		3C452DFB1DE2DD6B00A9C498 /* CollectionPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */; };
-		3C452DFF1DE2DE0400A9C498 /* ColPlacesViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DFE1DE2DE0400A9C498 /* ColPlacesViewCell.m */; };
+		3C452E021DE2ECDA00A9C498 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +78,8 @@
 		3C452DF61DE2D76300A9C498 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		3C452DF81DE2DD6B00A9C498 /* CollectionPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionPlacesViewController.h; sourceTree = "<group>"; };
 		3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionPlacesViewController.m; sourceTree = "<group>"; };
-		3C452DFD1DE2DE0400A9C498 /* ColPlacesViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColPlacesViewCell.h; sourceTree = "<group>"; };
-		3C452DFE1DE2DE0400A9C498 /* ColPlacesViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColPlacesViewCell.m; sourceTree = "<group>"; };
+		3C452E001DE2ECDA00A9C498 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewCell.h; path = ../CollectionViewCell.h; sourceTree = "<group>"; };
+		3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewCell.m; path = ../CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +132,8 @@
 			children = (
 				3C452DF41DE2D72B00A9C498 /* Model */,
 				3C452DAF1DE2CC8800A9C498 /* AppDelegate.h */,
+				3C452E001DE2ECDA00A9C498 /* CollectionViewCell.h */,
+				3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */,
 				3C452DB01DE2CC8800A9C498 /* AppDelegate.m */,
 				3C452DB21DE2CC8800A9C498 /* ViewController.h */,
 				3C452DB31DE2CC8800A9C498 /* ViewController.m */,
@@ -143,8 +145,6 @@
 				3C452DC01DE2CC8800A9C498 /* Info.plist */,
 				3C452DB81DE2CC8800A9C498 /* Lab6.xcdatamodeld */,
 				3C452DAC1DE2CC8800A9C498 /* Supporting Files */,
-				3C452DFD1DE2DE0400A9C498 /* ColPlacesViewCell.h */,
-				3C452DFE1DE2DE0400A9C498 /* ColPlacesViewCell.m */,
 			);
 			path = Lab6;
 			sourceTree = "<group>";
@@ -339,8 +339,8 @@
 				3C452DB11DE2CC8800A9C498 /* AppDelegate.m in Sources */,
 				3C452DFB1DE2DD6B00A9C498 /* CollectionPlacesViewController.m in Sources */,
 				3C452DBA1DE2CC8800A9C498 /* Lab6.xcdatamodeld in Sources */,
-				3C452DFF1DE2DE0400A9C498 /* ColPlacesViewCell.m in Sources */,
 				3C452DAE1DE2CC8800A9C498 /* main.m in Sources */,
+				3C452E021DE2ECDA00A9C498 /* CollectionViewCell.m in Sources */,
 				3C452DF71DE2D76300A9C498 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
