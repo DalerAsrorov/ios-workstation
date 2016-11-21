@@ -21,8 +21,6 @@
         NSString *path = [[NSBundle mainBundle] pathForResource: @"places" ofType:@"plist"];
         _places = [[NSMutableArray alloc] initWithContentsOfFile:path];
         
-        NSLog(@"Places array: %@", _places);
-        
     }
     
     return self;

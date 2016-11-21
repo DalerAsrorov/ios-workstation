@@ -7,7 +7,7 @@
 //
 
 #import "Model.h"
-#import "CollectionViewCell.h"
+
 #import "CollectionPlacesViewController.h"
 
 @interface CollectionPlacesViewController ()
@@ -64,13 +64,12 @@ static NSString * const reuseIdentifier = @"PlaceCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+
+ CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     NSDictionary *currentDict = [_model placeAtIndex: indexPath.row];
     
-    [cell.placeName setText:@"Value"];
+    [cell setUpCell: currentDict];
     
     return cell;
 }

@@ -11,11 +11,11 @@
 @interface CollectionViewCell : UICollectionViewCell
 
 @property (nonatomic) int dice;
+//@property (weak, nonatomic) IBOutlet UIImageView *placeImage;
+//@property (weak, nonatomic) IBOutlet UILabel *placeName;
 @property (weak, nonatomic) IBOutlet UIImageView *placeImage;
 @property (weak, nonatomic) IBOutlet UILabel *placeName;
 
-
 - (void) setUpCell: (NSDictionary *) dict;
-
 
 @end

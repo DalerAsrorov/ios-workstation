@@ -30,7 +30,7 @@
         <scene sceneID="yFs-6c-3IU">
             <objects>
                 <collectionViewController id="TfJ-0o-C24" customClass="CollectionPlacesViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Dyz-zP-gqQ">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dyz-zP-gqQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.60372382690000004" green="0.76165288659999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,6 +61,10 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="placeImage" destination="8D9-bp-Aiy" id="aSS-Ku-TOt"/>
+                                    <outlet property="placeName" destination="BvJ-4P-CiJ" id="frf-Ha-iO8"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

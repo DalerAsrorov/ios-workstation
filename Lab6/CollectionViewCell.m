@@ -10,6 +10,15 @@
 
 @implementation CollectionViewCell
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
 - (void) setUpCell: (NSDictionary *) dict {
     NSString *imageUrl = dict[@"image"];
     NSString *name = dict[@"name"];
