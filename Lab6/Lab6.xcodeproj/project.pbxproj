@@ -28,6 +28,7 @@
 		3C452DF71DE2D76300A9C498 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF61DE2D76300A9C498 /* Model.m */; };
 		3C452DFB1DE2DD6B00A9C498 /* CollectionPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */; };
 		3C452E021DE2ECDA00A9C498 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */; };
+		3CEF92D51DE5C2AC00C11F09 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF92D41DE5C2AC00C11F09 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionPlacesViewController.m; sourceTree = "<group>"; };
 		3C452E001DE2ECDA00A9C498 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewCell.h; path = ../CollectionViewCell.h; sourceTree = "<group>"; };
 		3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewCell.m; path = ../CollectionViewCell.m; sourceTree = "<group>"; };
+		3CEF92D31DE5C2AC00C11F09 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3CEF92D41DE5C2AC00C11F09 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,16 +133,11 @@
 		3C452DAB1DE2CC8800A9C498 /* Lab6 */ = {
 			isa = PBXGroup;
 			children = (
+				3CEF92D61DE5C2B800C11F09 /* Controllers */,
 				3C452DF41DE2D72B00A9C498 /* Model */,
 				3C452DAF1DE2CC8800A9C498 /* AppDelegate.h */,
-				3C452E001DE2ECDA00A9C498 /* CollectionViewCell.h */,
-				3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */,
 				3C452DB01DE2CC8800A9C498 /* AppDelegate.m */,
-				3C452DB21DE2CC8800A9C498 /* ViewController.h */,
-				3C452DB31DE2CC8800A9C498 /* ViewController.m */,
 				3C452DB51DE2CC8800A9C498 /* Main.storyboard */,
-				3C452DF81DE2DD6B00A9C498 /* CollectionPlacesViewController.h */,
-				3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */,
 				3C452DBB1DE2CC8800A9C498 /* Assets.xcassets */,
 				3C452DBD1DE2CC8800A9C498 /* LaunchScreen.storyboard */,
 				3C452DC01DE2CC8800A9C498 /* Info.plist */,
@@ -191,6 +189,21 @@
 				3C452DF61DE2D76300A9C498 /* Model.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		3CEF92D61DE5C2B800C11F09 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C452E001DE2ECDA00A9C498 /* CollectionViewCell.h */,
+				3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */,
+				3C452DB21DE2CC8800A9C498 /* ViewController.h */,
+				3C452DB31DE2CC8800A9C498 /* ViewController.m */,
+				3C452DF81DE2DD6B00A9C498 /* CollectionPlacesViewController.h */,
+				3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */,
+				3CEF92D31DE5C2AC00C11F09 /* DetailViewController.h */,
+				3CEF92D41DE5C2AC00C11F09 /* DetailViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +351,7 @@
 				3C452DB41DE2CC8800A9C498 /* ViewController.m in Sources */,
 				3C452DB11DE2CC8800A9C498 /* AppDelegate.m in Sources */,
 				3C452DFB1DE2DD6B00A9C498 /* CollectionPlacesViewController.m in Sources */,
+				3CEF92D51DE5C2AC00C11F09 /* DetailViewController.m in Sources */,
 				3C452DBA1DE2CC8800A9C498 /* Lab6.xcdatamodeld in Sources */,
 				3C452DAE1DE2CC8800A9C498 /* main.m in Sources */,
 				3C452E021DE2ECDA00A9C498 /* CollectionViewCell.m in Sources */,

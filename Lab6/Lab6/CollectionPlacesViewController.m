@@ -7,7 +7,7 @@
 //
 
 #import "Model.h"
-
+#import "DetailViewController.h"
 #import "CollectionPlacesViewController.h"
 
 @interface CollectionPlacesViewController ()
@@ -39,15 +39,23 @@ static NSString * const reuseIdentifier = @"PlaceCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *) segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+//    if(segue.identifier == reuseIdentifier) {
+        NSLog(@"identifiers are equal...");
+        NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+        DetailViewController *destViewController = (DetailViewController *) segue.destinationViewController;
+
+        NSIndexPath *index = [indexPaths firstObject];
+        destViewController.place = [self.model placeAtIndex: index.row];
+    
+//    }
+    
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -77,6 +85,22 @@ static NSString * const reuseIdentifier = @"PlaceCell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+
+#pragma mark - Rotation
+
+- (void) willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) [self.collectionView collectionViewLayout];
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    if(orientation == UIInterfaceOrientationPortrait) {
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    } else {
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    }
+    
+    [super willTransitionToTraitCollection: newCollection withTransitionCoordinator: coordinator];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
