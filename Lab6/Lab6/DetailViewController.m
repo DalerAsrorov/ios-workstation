@@ -32,10 +32,13 @@
 
 - (void) webViewDidStartLoad:(UIWebView *) webView {
     NSLog(@"Started animating");
+    self.activityIndicator.hidden = NO;
     [self.activityIndicator startAnimating];
+    [self.view bringSubviewToFront: self.activityIndicator];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView *) webView {
+    self.activityIndicator.hidden = YES;
     [self.activityIndicator stopAnimating];
 }
 
