@@ -70,8 +70,8 @@ static NSString * const reuseIdentifier = @"PlaceCell";
     NSDictionary *currentDict = [_model placeAtIndex: indexPath.row];
     NSLog(@"%@ ", currentDict);
     
-    cell.placeName.text = @"CHeck";
-//    [cell setUpCell: currentDict];
+//    cell.placeName.text = @"CHeck";
+    [cell setUpCell: currentDict];
     
     return cell;
 }
