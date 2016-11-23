@@ -17,18 +17,11 @@
 		3C452DCA1DE2CC8800A9C498 /* Lab6Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DC91DE2CC8800A9C498 /* Lab6Tests.m */; };
 		3C452DD51DE2CC8800A9C498 /* Lab6UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DD41DE2CC8800A9C498 /* Lab6UITests.m */; };
 		3C452DE31DE2CCE700A9C498 /* places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DE21DE2CCE700A9C498 /* places.plist */; };
-		3C452DE51DE2D2AC00A9C498 /* pamir.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DE41DE2D2AC00A9C498 /* pamir.jpg */; };
-		3C452DE71DE2D3F200A9C498 /* dc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DE61DE2D3F200A9C498 /* dc.jpg */; };
-		3C452DE91DE2D48100A9C498 /* sandiegozoo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DE81DE2D48100A9C498 /* sandiegozoo.jpg */; };
-		3C452DEB1DE2D53100A9C498 /* griffith.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DEA1DE2D53100A9C498 /* griffith.jpg */; };
-		3C452DED1DE2D59A00A9C498 /* redsquare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DEC1DE2D59A00A9C498 /* redsquare.jpg */; };
-		3C452DEF1DE2D5FC00A9C498 /* peterhof.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DEE1DE2D5FC00A9C498 /* peterhof.jpg */; };
-		3C452DF11DE2D68F00A9C498 /* yosemite.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DF01DE2D68F00A9C498 /* yosemite.jpeg */; };
-		3C452DF31DE2D6CA00A9C498 /* redlands.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C452DF21DE2D6CA00A9C498 /* redlands.jpg */; };
 		3C452DF71DE2D76300A9C498 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF61DE2D76300A9C498 /* Model.m */; };
 		3C452DFB1DE2DD6B00A9C498 /* CollectionPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452DF91DE2DD6B00A9C498 /* CollectionPlacesViewController.m */; };
 		3C452E021DE2ECDA00A9C498 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */; };
 		3CEF92D51DE5C2AC00C11F09 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEF92D41DE5C2AC00C11F09 /* DetailViewController.m */; };
+		3CEF92D81DE5D8C900C11F09 /* brazil.png in Resources */ = {isa = PBXBuildFile; fileRef = 3CEF92D71DE5D8C900C11F09 /* brazil.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,14 +60,6 @@
 		3C452DD41DE2CC8800A9C498 /* Lab6UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab6UITests.m; sourceTree = "<group>"; };
 		3C452DD61DE2CC8800A9C498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C452DE21DE2CCE700A9C498 /* places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = places.plist; sourceTree = "<group>"; };
-		3C452DE41DE2D2AC00A9C498 /* pamir.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pamir.jpg; sourceTree = "<group>"; };
-		3C452DE61DE2D3F200A9C498 /* dc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dc.jpg; sourceTree = "<group>"; };
-		3C452DE81DE2D48100A9C498 /* sandiegozoo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sandiegozoo.jpg; sourceTree = "<group>"; };
-		3C452DEA1DE2D53100A9C498 /* griffith.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = griffith.jpg; sourceTree = "<group>"; };
-		3C452DEC1DE2D59A00A9C498 /* redsquare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = redsquare.jpg; sourceTree = "<group>"; };
-		3C452DEE1DE2D5FC00A9C498 /* peterhof.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peterhof.jpg; sourceTree = "<group>"; };
-		3C452DF01DE2D68F00A9C498 /* yosemite.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yosemite.jpeg; sourceTree = "<group>"; };
-		3C452DF21DE2D6CA00A9C498 /* redlands.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = redlands.jpg; sourceTree = "<group>"; };
 		3C452DF51DE2D76300A9C498 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		3C452DF61DE2D76300A9C498 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		3C452DF81DE2DD6B00A9C498 /* CollectionPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionPlacesViewController.h; sourceTree = "<group>"; };
@@ -83,6 +68,7 @@
 		3C452E011DE2ECDA00A9C498 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewCell.m; path = ../CollectionViewCell.m; sourceTree = "<group>"; };
 		3CEF92D31DE5C2AC00C11F09 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3CEF92D41DE5C2AC00C11F09 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3CEF92D71DE5D8C900C11F09 /* brazil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brazil.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +125,7 @@
 				3C452DB01DE2CC8800A9C498 /* AppDelegate.m */,
 				3C452DB51DE2CC8800A9C498 /* Main.storyboard */,
 				3C452DBB1DE2CC8800A9C498 /* Assets.xcassets */,
+				3CEF92D71DE5D8C900C11F09 /* brazil.png */,
 				3C452DBD1DE2CC8800A9C498 /* LaunchScreen.storyboard */,
 				3C452DC01DE2CC8800A9C498 /* Info.plist */,
 				3C452DB81DE2CC8800A9C498 /* Lab6.xcdatamodeld */,
@@ -150,15 +137,7 @@
 		3C452DAC1DE2CC8800A9C498 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C452DF01DE2D68F00A9C498 /* yosemite.jpeg */,
-				3C452DF21DE2D6CA00A9C498 /* redlands.jpg */,
-				3C452DEC1DE2D59A00A9C498 /* redsquare.jpg */,
-				3C452DEE1DE2D5FC00A9C498 /* peterhof.jpg */,
-				3C452DEA1DE2D53100A9C498 /* griffith.jpg */,
-				3C452DE81DE2D48100A9C498 /* sandiegozoo.jpg */,
 				3C452DE21DE2CCE700A9C498 /* places.plist */,
-				3C452DE61DE2D3F200A9C498 /* dc.jpg */,
-				3C452DE41DE2D2AC00A9C498 /* pamir.jpg */,
 				3C452DAD1DE2CC8800A9C498 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -313,17 +292,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C452DBF1DE2CC8800A9C498 /* LaunchScreen.storyboard in Resources */,
-				3C452DE51DE2D2AC00A9C498 /* pamir.jpg in Resources */,
 				3C452DBC1DE2CC8800A9C498 /* Assets.xcassets in Resources */,
-				3C452DF11DE2D68F00A9C498 /* yosemite.jpeg in Resources */,
 				3C452DE31DE2CCE700A9C498 /* places.plist in Resources */,
-				3C452DE71DE2D3F200A9C498 /* dc.jpg in Resources */,
-				3C452DE91DE2D48100A9C498 /* sandiegozoo.jpg in Resources */,
-				3C452DEB1DE2D53100A9C498 /* griffith.jpg in Resources */,
-				3C452DF31DE2D6CA00A9C498 /* redlands.jpg in Resources */,
+				3CEF92D81DE5D8C900C11F09 /* brazil.png in Resources */,
 				3C452DB71DE2CC8800A9C498 /* Main.storyboard in Resources */,
-				3C452DEF1DE2D5FC00A9C498 /* peterhof.jpg in Resources */,
-				3C452DED1DE2D59A00A9C498 /* redsquare.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

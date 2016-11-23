@@ -4,11 +4,11 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>Pamir</string>
+		<string>Christ the Redeemer</string>
 		<key>website</key>
-		<string>http://www.pamirs.org/</string>
+		<string>https://www.britannica.com/topic/Christ-the-Redeemer</string>
 		<key>image</key>
-		<string>pamir.jpg</string>
+		<string>brazil</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -20,11 +20,11 @@
 	</dict>
 	<dict>
 		<key>website</key>
-		<string>http://zoo.sandiegozoo.org/</string>
+		<string>http://www.sandiegozooglobal.org/</string>
 		<key>name</key>
 		<string>San Diego Zoo</string>
 		<key>image</key>
-		<string>sandiegozoo.jpg</string>
+		<string>sandiegozoo</string>
 	</dict>
 	<dict>
 		<key>website</key>
@@ -32,13 +32,13 @@
 		<key>name</key>
 		<string>Griffith Observatory</string>
 		<key>image</key>
-		<string>griffith.jpg</string>
+		<string>griffith</string>
 	</dict>
 	<dict>
 		<key>website</key>
 		<string>http://www.moscow.info/red-square</string>
 		<key>image</key>
-		<string>redsquare.jpg</string>
+		<string>redsquare</string>
 		<key>name</key>
 		<string>Red Square</string>
 	</dict>
@@ -48,7 +48,7 @@
 		<key>name</key>
 		<string>Peterhof Palace</string>
 		<key>image</key>
-		<string>peterhof.jpg</string>
+		<string>peterhof</string>
 	</dict>
 	<dict>
 		<key>website</key>
@@ -56,7 +56,7 @@
 		<key>name</key>
 		<string>Yosemite</string>
 		<key>image</key>
-		<string>yosemite.jpeg</string>
+		<string>yosemite</string>
 	</dict>
 	<dict>
 		<key>website</key>
@@ -64,7 +64,7 @@
 		<key>name</key>
 		<string>Redlands</string>
 		<key>image</key>
-		<string>redlands.jpg</string>
+		<string>redlands</string>
 	</dict>
 </array>
 </plist>
