@@ -18,15 +18,11 @@
     [super viewDidLoad];
     NSString *name = self.place[@"name"];
     NSURL *url = self.place[@"website"];
-    NSLog(@"URL here %@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.place[@"website"]]];;
     
     [self.webview loadRequest: request];
     self.navigationItem.title = name;
     
-    
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,15 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewWillDisappear:(BOOL)animated {
-    if([self.webview isLoading]) {
-        [self.webview stopLoading];
-    }
-    
-    self.webview.delegate = nil;
-}
-
 - (void) webViewDidStartLoad:(UIWebView *) webView {
+    NSLog(@"Started animating");
     [self.activityIndicator startAnimating];
 }
 
