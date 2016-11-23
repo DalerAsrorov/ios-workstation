@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -35,32 +36,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.60372382690000004" green="0.76165288659999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XiS-7c-Odw">
-                            <size key="itemSize" width="147" height="150"/>
+                            <size key="itemSize" width="120" height="157"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaceCell" id="0dz-ld-OKk" customClass="CollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="147" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="157"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="147" height="150"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="157"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-bp-Aiy">
-                                            <rect key="frame" x="0.0" y="0.0" width="147" height="129"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-bp-Aiy">
+                                            <rect key="frame" x="0.0" y="8" width="119" height="115"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="daler" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-4P-CiJ">
-                                            <rect key="frame" x="34" y="121" width="79" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BvJ-4P-CiJ">
+                                            <rect key="frame" x="0.0" y="122" width="119" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="KTx-wp-Ua9"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="8D9-bp-Aiy" firstAttribute="centerX" secondItem="BvJ-4P-CiJ" secondAttribute="centerX" id="4ht-Ts-lpg"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="8D9-bp-Aiy" secondAttribute="bottom" constant="26" id="LPC-ma-UQr"/>
+                                    <constraint firstAttribute="trailing" secondItem="8D9-bp-Aiy" secondAttribute="trailing" constant="1" id="Zxt-rN-vF0"/>
+                                    <constraint firstItem="BvJ-4P-CiJ" firstAttribute="leading" secondItem="0dz-ld-OKk" secondAttribute="leadingMargin" constant="-8" id="kJd-Fb-xwz"/>
+                                    <constraint firstItem="8D9-bp-Aiy" firstAttribute="top" secondItem="0dz-ld-OKk" secondAttribute="top" constant="8" id="oc1-ka-Lgl"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="BvJ-4P-CiJ" secondAttribute="bottom" constant="-8" id="uXq-pg-tws"/>
+                                    <constraint firstItem="8D9-bp-Aiy" firstAttribute="leading" secondItem="0dz-ld-OKk" secondAttribute="leading" id="yKo-Zi-YfK"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="placeImage" destination="8D9-bp-Aiy" id="aSS-Ku-TOt"/>
                                     <outlet property="placeName" destination="BvJ-4P-CiJ" id="frf-Ha-iO8"/>

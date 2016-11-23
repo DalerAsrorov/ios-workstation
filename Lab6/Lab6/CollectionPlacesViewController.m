@@ -29,7 +29,7 @@ static NSString * const reuseIdentifier = @"PlaceCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -68,8 +68,10 @@ static NSString * const reuseIdentifier = @"PlaceCell";
  CollectionViewCell *cell = (CollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     NSDictionary *currentDict = [_model placeAtIndex: indexPath.row];
+    NSLog(@"%@ ", currentDict);
     
-    [cell setUpCell: currentDict];
+    cell.placeName.text = @"CHeck";
+//    [cell setUpCell: currentDict];
     
     return cell;
 }

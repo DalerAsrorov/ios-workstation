@@ -10,21 +10,13 @@
 
 @implementation CollectionViewCell
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
 
 - (void) setUpCell: (NSDictionary *) dict {
     NSString *imageUrl = dict[@"image"];
     NSString *name = dict[@"name"];
     
-    _placeName.text = name;
-    _placeImage.image = [UIImage imageNamed: imageUrl];
+    self.placeName.text = name;
+    self.placeImage.image = [UIImage imageNamed: imageUrl];
 }
 
 @end
