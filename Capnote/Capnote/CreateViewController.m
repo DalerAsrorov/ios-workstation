@@ -43,6 +43,21 @@
     
 }
 
+/*
+ * Once user clicks button, 
+ * it will show him the image picker.
+ */
+
+- (IBAction)addNewImage:(id)sender {
+     self.selectedImagePicker = [[UIImagePickerController alloc] init];
+     self.selectedImagePicker.delegate = self;
+     self.selectedImagePicker.allowsEditing = YES;
+     self.selectedImagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController: self.selectedImagePicker animated:YES completion:NULL];
+    
+}
+
 // The number of columns of data
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -60,6 +75,7 @@
 {
     return self.pickerData[row];
 }
+
 
 /*
 #pragma mark - Navigation
