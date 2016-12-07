@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Firebase/Firebase.h>
+#import "NotesModel.h"
 
 @interface FeedTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
 
 @end

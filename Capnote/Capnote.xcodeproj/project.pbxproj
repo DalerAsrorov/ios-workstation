@@ -22,15 +22,16 @@
 		3C9154A51DF7B39800ACF682 /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154A41DF7B39800ACF682 /* FeedTableViewCell.m */; };
 		3C9154A61DF7B39800ACF682 /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154A41DF7B39800ACF682 /* FeedTableViewCell.m */; };
 		3C9154A71DF7B39800ACF682 /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154A41DF7B39800ACF682 /* FeedTableViewCell.m */; };
-		3C9154AB1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
-		3C9154AC1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
-		3C9154AD1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
 		3C9154AF1DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
 		3C9154B01DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
 		3C9154B11DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
 		3C9154B31DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
 		3C9154B41DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
 		3C9154B51DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
+		3C9154B91DF7FCF000ACF682 /* NotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154B81DF7FCF000ACF682 /* NotesModel.m */; };
+		3C9154BA1DF7FCF000ACF682 /* NotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154B81DF7FCF000ACF682 /* NotesModel.m */; };
+		3C9154BB1DF7FCF000ACF682 /* NotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154B81DF7FCF000ACF682 /* NotesModel.m */; };
+		3C9154BE1DF8060D00ACF682 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154BD1DF8060D00ACF682 /* UserModel.m */; };
 		4EE03D17D414457301AD4033 /* libPods-Capnote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */; };
 		7CAD3E7272CDBC556ADF3A7F /* libPods-CapnoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBDE8132D0BC66895207797 /* libPods-CapnoteTests.a */; };
 		7F6F5F5DCD8ABE09197797B3 /* libPods-CapnoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F512DC5A86715B929B93D3FA /* libPods-CapnoteUITests.a */; };
@@ -77,11 +78,13 @@
 		3C91549F1DF7B17300ACF682 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		3C9154A31DF7B39800ACF682 /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
 		3C9154A41DF7B39800ACF682 /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
-		3C9154A91DF7D44700ACF682 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
-		3C9154AA1DF7D44700ACF682 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Activity Feed-50.png"; sourceTree = "<group>"; };
 		3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C9154B61DF7FBCE00ACF682 /* Capnote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Capnote.entitlements; sourceTree = "<group>"; };
+		3C9154B71DF7FCF000ACF682 /* NotesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesModel.h; sourceTree = "<group>"; };
+		3C9154B81DF7FCF000ACF682 /* NotesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesModel.m; sourceTree = "<group>"; };
+		3C9154BC1DF8060D00ACF682 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		3C9154BD1DF8060D00ACF682 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		3E3C7689A860E818D5854F74 /* Pods-CapnoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capnote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capnote/Pods-Capnote.release.xcconfig"; sourceTree = "<group>"; };
 		68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Capnote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,8 +206,10 @@
 		3C9154A81DF7D08300ACF682 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				3C9154A91DF7D44700ACF682 /* DataModel.h */,
-				3C9154AA1DF7D44700ACF682 /* DataModel.m */,
+				3C9154B71DF7FCF000ACF682 /* NotesModel.h */,
+				3C9154B81DF7FCF000ACF682 /* NotesModel.m */,
+				3C9154BC1DF8060D00ACF682 /* UserModel.h */,
+				3C9154BD1DF8060D00ACF682 /* UserModel.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -526,10 +531,11 @@
 			files = (
 				3C9154A01DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 				3C9154A51DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
+				3C9154B91DF7FCF000ACF682 /* NotesModel.m in Sources */,
 				3C91546F1DF6A72900ACF682 /* ViewController.m in Sources */,
 				3C91546C1DF6A72900ACF682 /* AppDelegate.m in Sources */,
-				3C9154AB1DF7D44700ACF682 /* DataModel.m in Sources */,
 				3C9154751DF6A72900ACF682 /* Capnote.xcdatamodeld in Sources */,
+				3C9154BE1DF8060D00ACF682 /* UserModel.m in Sources */,
 				3C9154691DF6A72900ACF682 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,7 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9154851DF6A72900ACF682 /* CapnoteTests.m in Sources */,
-				3C9154AC1DF7D44700ACF682 /* DataModel.m in Sources */,
+				3C9154BA1DF7FCF000ACF682 /* NotesModel.m in Sources */,
 				3C9154A61DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
 				3C9154A11DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 			);
@@ -550,7 +556,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9154901DF6A72900ACF682 /* CapnoteUITests.m in Sources */,
-				3C9154AD1DF7D44700ACF682 /* DataModel.m in Sources */,
+				3C9154BB1DF7FCF000ACF682 /* NotesModel.m in Sources */,
 				3C9154A71DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
 				3C9154A21DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 			);
@@ -595,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -642,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -684,6 +692,7 @@
 			baseConfigurationReference = AF2B4DD2AFE1A1144D0C40E9 /* Pods-Capnote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Capnote/Capnote.entitlements;
 				DEVELOPMENT_TEAM = 8M69JLFD46;
 				INFOPLIST_FILE = Capnote/Info.plist;
@@ -698,6 +707,7 @@
 			baseConfigurationReference = 58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Capnote/Capnote.entitlements;
 				DEVELOPMENT_TEAM = 8M69JLFD46;
 				INFOPLIST_FILE = Capnote/Info.plist;
