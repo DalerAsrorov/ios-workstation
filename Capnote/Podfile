@@ -7,6 +7,7 @@ target 'Capnote' do
 
   # Pods for Capnote
   pod 'Firebase'
+  pod 'Firebase/Auth'
 
   target 'CapnoteTests' do
     inherit! :search_paths

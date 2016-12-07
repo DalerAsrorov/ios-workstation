@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Firebase.h"
+@import Firebase;
+
 
 @interface AppDelegate ()
 
@@ -20,6 +21,14 @@
     // Override point for customization after application launch.
     
     [FIRApp configure];
+    [[FIRAuth auth] signInWithEmail: @"asrorids@gmail.com" password:@"NovaD@ler2014" completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if(user != nil) {
+           NSLog(@"User: %@", user.email);
+        } else {
+            NSLog(@"No user. Error: @", error);
+        }
+        
+    }];
     
     return YES;
 }
