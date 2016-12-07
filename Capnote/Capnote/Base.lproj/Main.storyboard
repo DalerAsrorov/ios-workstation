@@ -133,7 +133,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="GBR-5k-ygw">
             <objects>
                 <viewController id="OcG-hR-QMB" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="circle-user" id="zmV-Fp-SjD"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="circle-user" id="zmV-Fp-SjD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0K3-Ub-SC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
