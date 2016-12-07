@@ -76,6 +76,8 @@ static int xNextLocationBuffer;
 }
 
 - (IBAction)submitNote:(id)sender {
+    
+    
 }
 
 
@@ -93,9 +95,10 @@ static int xNextLocationBuffer;
     [self.imagesBox addSubview: customImageView];
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
     
+    Fire
+    
+    // increament cyrrent X coordinate for the next picked image
     dynamicX += defaultWidth + xNextLocationBuffer;
-    NSLog(@"}}}dynamicX value: %d", dynamicX);
-    buttnCounter++;
 }
 
 

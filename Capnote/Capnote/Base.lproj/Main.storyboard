@@ -107,6 +107,7 @@
                     <connections>
                         <segue destination="iCd-9H-P1P" kind="relationship" relationship="viewControllers" id="tfZ-Um-Ah1"/>
                         <segue destination="5ed-YZ-VLC" kind="relationship" relationship="viewControllers" id="mln-2v-XJL"/>
+                        <segue destination="OcG-hR-QMB" kind="relationship" relationship="viewControllers" id="xbD-DY-PkD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f53-6z-u9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,6 +132,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CwG-e6-cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GBR-5k-ygw">
+            <objects>
+                <viewController id="OcG-hR-QMB" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GpW-Y3-gcd"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJw-Kk-Qat"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZDr-Cb-HFK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="circle-user" id="zmV-Fp-SjD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0K3-Ub-SC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="918"/>
         </scene>
         <!--Add-->
         <scene sceneID="xtA-K5-5aI">
@@ -276,6 +296,7 @@
     </scenes>
     <resources>
         <image name="add" width="30" height="30"/>
+        <image name="circle-user" width="30" height="30"/>
         <image name="earth-america" width="30" height="30"/>
         <image name="me" width="960" height="960"/>
     </resources>
