@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateViewController : UIViewController
+@interface CreateViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate> 
+
+@property (weak, nonatomic) IBOutlet UITextView *desc;
+@property (weak, nonatomic) IBOutlet UIButton *addImageButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UIView *imagesBox;
+@property (weak, nonatomic) IBOutlet UIPickerView *sectionPicker;
+
+- (void) styleManually;
 
 @end

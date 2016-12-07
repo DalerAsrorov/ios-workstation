@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -142,13 +143,98 @@
                     <view key="view" contentMode="scaleToFill" id="hw5-de-1yA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7aI-Bb-zeq">
+                                <rect key="frame" x="67" y="75" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add New Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeK-1i-s73">
+                                <rect key="frame" x="67" y="28" width="240" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="f8k-1B-UZF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6N-Sb-S0Y">
+                                <rect key="frame" x="67" y="113" width="240" height="84"/>
+                                <color key="backgroundColor" red="0.2044803932" green="0.51182014239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="7Fk-Mr-Az0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Add Image"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Zw-Eh-ROt">
+                                <rect key="frame" x="67" y="338" width="240" height="99"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="ETY-Ca-0pg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes" keyboardAppearance="alert"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-vA-nJE">
+                                <rect key="frame" x="67" y="309" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wx9-Om-tYv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FF-jk-lQH">
+                                <rect key="frame" x="67" y="205" width="240" height="96"/>
+                                <color key="tintColor" red="0.2044803932" green="0.51182014239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjF-CA-vJ7">
+                                <rect key="frame" x="67" y="445" width="240" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="kr3-i0-MIQ"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KeK-1i-s73" firstAttribute="leading" secondItem="7aI-Bb-zeq" secondAttribute="leading" id="0Rg-Wf-9qw"/>
+                            <constraint firstItem="6FF-jk-lQH" firstAttribute="top" secondItem="h6N-Sb-S0Y" secondAttribute="bottom" constant="8" id="1kY-CB-usI"/>
+                            <constraint firstItem="xpJ-vA-nJE" firstAttribute="leading" secondItem="4Zw-Eh-ROt" secondAttribute="leading" id="21g-10-iqM"/>
+                            <constraint firstItem="KeK-1i-s73" firstAttribute="trailing" secondItem="7aI-Bb-zeq" secondAttribute="trailing" id="6yf-jS-cOY"/>
+                            <constraint firstItem="h6N-Sb-S0Y" firstAttribute="top" secondItem="7aI-Bb-zeq" secondAttribute="bottom" constant="8" symbolic="YES" id="B3j-Ii-niE"/>
+                            <constraint firstItem="6FF-jk-lQH" firstAttribute="trailing" secondItem="xpJ-vA-nJE" secondAttribute="trailing" id="B4L-jf-0Xn"/>
+                            <constraint firstItem="7aI-Bb-zeq" firstAttribute="trailing" secondItem="h6N-Sb-S0Y" secondAttribute="trailing" id="D6P-OE-4kg"/>
+                            <constraint firstItem="KeK-1i-s73" firstAttribute="centerX" secondItem="hw5-de-1yA" secondAttribute="centerX" id="GFR-Xm-J0s"/>
+                            <constraint firstItem="KeK-1i-s73" firstAttribute="top" secondItem="Asy-5B-hZO" secondAttribute="bottom" constant="8" symbolic="YES" id="GRt-uT-r4t"/>
+                            <constraint firstItem="7aI-Bb-zeq" firstAttribute="leading" secondItem="h6N-Sb-S0Y" secondAttribute="leading" id="JHJ-sm-a7D"/>
+                            <constraint firstItem="Il3-dp-jch" firstAttribute="top" secondItem="tjF-CA-vJ7" secondAttribute="bottom" constant="87" id="LL6-jk-xjO"/>
+                            <constraint firstItem="xpJ-vA-nJE" firstAttribute="top" secondItem="6FF-jk-lQH" secondAttribute="bottom" constant="8" id="O6w-rL-ptr"/>
+                            <constraint firstItem="h6N-Sb-S0Y" firstAttribute="leading" secondItem="6FF-jk-lQH" secondAttribute="leading" id="T0f-lS-OuN"/>
+                            <constraint firstItem="4Zw-Eh-ROt" firstAttribute="trailing" secondItem="tjF-CA-vJ7" secondAttribute="trailing" id="TJ5-YQ-tE9"/>
+                            <constraint firstItem="KeK-1i-s73" firstAttribute="leading" secondItem="hw5-de-1yA" secondAttribute="leadingMargin" constant="51" id="cNb-hf-ltQ"/>
+                            <constraint firstItem="7aI-Bb-zeq" firstAttribute="top" secondItem="KeK-1i-s73" secondAttribute="bottom" constant="18" id="fJW-Pn-hlo"/>
+                            <constraint firstItem="h6N-Sb-S0Y" firstAttribute="trailing" secondItem="6FF-jk-lQH" secondAttribute="trailing" id="iIM-NJ-TuB"/>
+                            <constraint firstItem="4Zw-Eh-ROt" firstAttribute="leading" secondItem="tjF-CA-vJ7" secondAttribute="leading" id="lsd-MW-EZl"/>
+                            <constraint firstItem="4Zw-Eh-ROt" firstAttribute="top" secondItem="xpJ-vA-nJE" secondAttribute="bottom" constant="8" symbolic="YES" id="pTa-E5-1bk"/>
+                            <constraint firstItem="6FF-jk-lQH" firstAttribute="leading" secondItem="xpJ-vA-nJE" secondAttribute="leading" id="pue-ak-2xF"/>
+                            <constraint firstItem="Il3-dp-jch" firstAttribute="top" secondItem="4Zw-Eh-ROt" secondAttribute="bottom" constant="181" id="rmG-kj-Mky"/>
+                            <constraint firstItem="xpJ-vA-nJE" firstAttribute="trailing" secondItem="4Zw-Eh-ROt" secondAttribute="trailing" id="tLX-a0-BYP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="add" id="7vE-dI-kKM"/>
+                    <connections>
+                        <outlet property="addImageButton" destination="h6N-Sb-S0Y" id="tCg-WH-4AC"/>
+                        <outlet property="desc" destination="4Zw-Eh-ROt" id="woX-7l-UGk"/>
+                        <outlet property="imagesBox" destination="6FF-jk-lQH" id="lIQ-37-ntJ"/>
+                        <outlet property="sectionPicker" destination="tjF-CA-vJ7" id="AOp-0u-r7s"/>
+                        <outlet property="textView" destination="4Zw-Eh-ROt" id="PcF-M8-wL0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-Lr-yBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="866"/>
+            <point key="canvasLocation" x="1076" y="865.81709145427294"/>
         </scene>
     </scenes>
     <resources>
