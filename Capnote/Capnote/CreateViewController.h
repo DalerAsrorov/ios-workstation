@@ -21,5 +21,6 @@
 - (void) styleManually;
 
 - (IBAction)addNewImage:(id)sender;
+- (IBAction)submitNote:(id)sender;
 
 @end

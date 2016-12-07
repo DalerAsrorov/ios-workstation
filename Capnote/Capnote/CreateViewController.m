@@ -58,6 +58,29 @@
     
 }
 
+- (IBAction)submitNote:(id)sender {
+}
+
+
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *) picker {
+    NSLog(@"~~~~WARNING: The user cancelled notes uplad.");
+    [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)imagePickerController:(UIImagePickerController *) thePicker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    UIImageView *customImageView = [[UIImageView alloc] initWithFrame: CGRectMake (90, 70, 100, 60)];
+    customImageView.image = chosenImage;
+    
+    [self.imagesBox addSubview: customImageView];
+    
+    [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+
 // The number of columns of data
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
