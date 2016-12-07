@@ -25,18 +25,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Daler Asrorov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvO-0W-WsR">
-                                            <rect key="frame" x="115" y="25" width="104" height="21"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Daler Asrorov" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bvO-0W-WsR">
+                                            <rect key="frame" x="115" y="23" width="108" height="24"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.11006326620229245" green="0.46436287430296108" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.0064419819973409176" green="0.76543837785720825" blue="0.98653477430343628" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Updated new stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KEj-di-TBh">
-                                            <rect key="frame" x="115" y="46" width="106" height="15"/>
+                                            <rect key="frame" x="115" y="47" width="108" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.13891091502004665" blue="0.49099777918781728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="me" id="o3p-cX-0mi">
@@ -113,7 +114,7 @@
         <scene sceneID="YVJ-Vw-3sp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iCd-9H-P1P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="k5T-rv-RWB"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="earth-america" id="k5T-rv-RWB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eIF-G2-C3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -130,6 +131,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="earth-america" width="30" height="30"/>
         <image name="me" width="960" height="960"/>
     </resources>
 </document>

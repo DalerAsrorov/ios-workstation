@@ -10,4 +10,11 @@
 
 @interface DataModel : NSObject
 
+
++ (instancetype) sharedModel;  
+
+- (NSUInteger) nNotes;
+- (NSDictionary *) noteWithID: (NSInteger) noteID;
+
+
 @end

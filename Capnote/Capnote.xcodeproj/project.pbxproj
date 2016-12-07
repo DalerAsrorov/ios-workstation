@@ -25,6 +25,15 @@
 		3C9154AB1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
 		3C9154AC1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
 		3C9154AD1DF7D44700ACF682 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154AA1DF7D44700ACF682 /* DataModel.m */; };
+		3C9154AF1DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
+		3C9154B01DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
+		3C9154B11DF7DD0000ACF682 /* Activity Feed-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */; };
+		3C9154B31DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
+		3C9154B41DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
+		3C9154B51DF7E43400ACF682 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */; };
+		4EE03D17D414457301AD4033 /* libPods-Capnote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */; };
+		7CAD3E7272CDBC556ADF3A7F /* libPods-CapnoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBDE8132D0BC66895207797 /* libPods-CapnoteTests.a */; };
+		7F6F5F5DCD8ABE09197797B3 /* libPods-CapnoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F512DC5A86715B929B93D3FA /* libPods-CapnoteUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35905CFE0A0AA86F5FCE5E75 /* Pods-CapnoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteUITests/Pods-CapnoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A53E03BAB94EBB4D004D14F /* Pods-CapnoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C9154641DF6A72900ACF682 /* Capnote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capnote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9154681DF6A72900ACF682 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C91546A1DF6A72900ACF682 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +79,15 @@
 		3C9154A41DF7B39800ACF682 /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		3C9154A91DF7D44700ACF682 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		3C9154AA1DF7D44700ACF682 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Activity Feed-50.png"; sourceTree = "<group>"; };
+		3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E3C7689A860E818D5854F74 /* Pods-CapnoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capnote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capnote/Pods-Capnote.release.xcconfig"; sourceTree = "<group>"; };
+		68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Capnote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F4D755AD2CFF407617A2D78 /* Pods-CapnoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteUITests/Pods-CapnoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF2B4DD2AFE1A1144D0C40E9 /* Pods-Capnote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capnote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Capnote/Pods-Capnote.debug.xcconfig"; sourceTree = "<group>"; };
+		DBBDE8132D0BC66895207797 /* libPods-CapnoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CapnoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F512DC5A86715B929B93D3FA /* libPods-CapnoteUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CapnoteUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE03D17D414457301AD4033 /* libPods-Capnote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CAD3E7272CDBC556ADF3A7F /* libPods-CapnoteTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6F5F5DCD8ABE09197797B3 /* libPods-CapnoteUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +125,8 @@
 				3C9154831DF6A72900ACF682 /* CapnoteTests */,
 				3C91548E1DF6A72900ACF682 /* CapnoteUITests */,
 				3C9154651DF6A72900ACF682 /* Products */,
+				EE0C55C2AE4745734ABFEDB8 /* Pods */,
+				B65588BEFE30E5110073048F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,8 +151,10 @@
 				3C91546E1DF6A72900ACF682 /* ViewController.m */,
 				3C9154701DF6A72900ACF682 /* Main.storyboard */,
 				3C9154761DF6A72900ACF682 /* Assets.xcassets */,
+				3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */,
 				3C9154781DF6A72900ACF682 /* LaunchScreen.storyboard */,
 				3C91547B1DF6A72900ACF682 /* Info.plist */,
+				3C9154B21DF7E43400ACF682 /* GoogleService-Info.plist */,
 				3C9154731DF6A72900ACF682 /* Capnote.xcdatamodeld */,
 				3C9154671DF6A72900ACF682 /* Supporting Files */,
 			);
@@ -180,6 +207,29 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
+		B65588BEFE30E5110073048F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */,
+				DBBDE8132D0BC66895207797 /* libPods-CapnoteTests.a */,
+				F512DC5A86715B929B93D3FA /* libPods-CapnoteUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE0C55C2AE4745734ABFEDB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF2B4DD2AFE1A1144D0C40E9 /* Pods-Capnote.debug.xcconfig */,
+				58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */,
+				3E3C7689A860E818D5854F74 /* Pods-CapnoteTests.debug.xcconfig */,
+				3A53E03BAB94EBB4D004D14F /* Pods-CapnoteTests.release.xcconfig */,
+				35905CFE0A0AA86F5FCE5E75 /* Pods-CapnoteUITests.debug.xcconfig */,
+				8F4D755AD2CFF407617A2D78 /* Pods-CapnoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C9154941DF6A72900ACF682 /* Build configuration list for PBXNativeTarget "Capnote" */;
 			buildPhases = (
+				B169EE0F9AC66B815141E46B /* [CP] Check Pods Manifest.lock */,
 				3C9154601DF6A72900ACF682 /* Sources */,
 				3C9154611DF6A72900ACF682 /* Frameworks */,
 				3C9154621DF6A72900ACF682 /* Resources */,
+				EFAFC4BDCCAEC3309BD5F9E5 /* [CP] Embed Pods Frameworks */,
+				EEF1EAFA3E7074EE0CBA5157 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,9 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C9154971DF6A72900ACF682 /* Build configuration list for PBXNativeTarget "CapnoteTests" */;
 			buildPhases = (
+				22FFDB3341C148020816A13A /* [CP] Check Pods Manifest.lock */,
 				3C91547C1DF6A72900ACF682 /* Sources */,
 				3C91547D1DF6A72900ACF682 /* Frameworks */,
 				3C91547E1DF6A72900ACF682 /* Resources */,
+				E88952C8C0C127420DCAD0D8 /* [CP] Embed Pods Frameworks */,
+				247D0635A07C214BE4993311 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,9 +278,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C91549A1DF6A72900ACF682 /* Build configuration list for PBXNativeTarget "CapnoteUITests" */;
 			buildPhases = (
+				C508D699FA03F3BB6E30E166 /* [CP] Check Pods Manifest.lock */,
 				3C9154871DF6A72900ACF682 /* Sources */,
 				3C9154881DF6A72900ACF682 /* Frameworks */,
 				3C9154891DF6A72900ACF682 /* Resources */,
+				11C081C2964487F9DD29B8CD /* [CP] Embed Pods Frameworks */,
+				A79A9F3E9B8983536733617B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,6 +347,8 @@
 			files = (
 				3C91547A1DF6A72900ACF682 /* LaunchScreen.storyboard in Resources */,
 				3C9154771DF6A72900ACF682 /* Assets.xcassets in Resources */,
+				3C9154B31DF7E43400ACF682 /* GoogleService-Info.plist in Resources */,
+				3C9154AF1DF7DD0000ACF682 /* Activity Feed-50.png in Resources */,
 				3C9154721DF6A72900ACF682 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +357,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9154B01DF7DD0000ACF682 /* Activity Feed-50.png in Resources */,
+				3C9154B41DF7E43400ACF682 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,10 +366,150 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9154B11DF7DD0000ACF682 /* Activity Feed-50.png in Resources */,
+				3C9154B51DF7E43400ACF682 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11C081C2964487F9DD29B8CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CapnoteUITests/Pods-CapnoteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22FFDB3341C148020816A13A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		247D0635A07C214BE4993311 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A79A9F3E9B8983536733617B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CapnoteUITests/Pods-CapnoteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B169EE0F9AC66B815141E46B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C508D699FA03F3BB6E30E166 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E88952C8C0C127420DCAD0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEF1EAFA3E7074EE0CBA5157 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Capnote/Pods-Capnote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFAFC4BDCCAEC3309BD5F9E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Capnote/Pods-Capnote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C9154601DF6A72900ACF682 /* Sources */ = {
@@ -470,6 +673,7 @@
 		};
 		3C9154951DF6A72900ACF682 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF2B4DD2AFE1A1144D0C40E9 /* Pods-Capnote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Capnote/Info.plist;
@@ -481,6 +685,7 @@
 		};
 		3C9154961DF6A72900ACF682 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Capnote/Info.plist;
@@ -492,6 +697,7 @@
 		};
 		3C9154981DF6A72900ACF682 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E3C7689A860E818D5854F74 /* Pods-CapnoteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CapnoteTests/Info.plist;
@@ -504,6 +710,7 @@
 		};
 		3C9154991DF6A72900ACF682 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A53E03BAB94EBB4D004D14F /* Pods-CapnoteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CapnoteTests/Info.plist;
@@ -516,6 +723,7 @@
 		};
 		3C91549B1DF6A72900ACF682 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35905CFE0A0AA86F5FCE5E75 /* Pods-CapnoteUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CapnoteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -527,6 +735,7 @@
 		};
 		3C91549C1DF6A72900ACF682 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F4D755AD2CFF407617A2D78 /* Pods-CapnoteUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CapnoteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
