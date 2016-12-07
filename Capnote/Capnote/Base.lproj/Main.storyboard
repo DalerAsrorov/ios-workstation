@@ -99,11 +99,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jE3-0v-7Iw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5Un-2Z-TuI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="iCd-9H-P1P" kind="relationship" relationship="viewControllers" id="tfZ-Um-Ah1"/>
+                        <segue destination="5ed-YZ-VLC" kind="relationship" relationship="viewControllers" id="mln-2v-XJL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f53-6z-u9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,8 +131,28 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
+        <!--Add-->
+        <scene sceneID="xtA-K5-5aI">
+            <objects>
+                <viewController id="5ed-YZ-VLC" customClass="CreateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Asy-5B-hZO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Il3-dp-jch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hw5-de-1yA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" image="add" id="7vE-dI-kKM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-Lr-yBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="866"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="add" width="30" height="30"/>
         <image name="earth-america" width="30" height="30"/>
         <image name="me" width="960" height="960"/>
     </resources>

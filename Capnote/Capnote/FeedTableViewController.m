@@ -22,7 +22,11 @@
     
     _reuseidentifier = @"FeedTableCell";
     _notesModel = [[NotesModel alloc] init];
-
+    
+    FIRStorage *storage = [FIRStorage storage];
+    
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -59,14 +63,14 @@
     NSArray *tempFilesArray = @[@"file1.jpg", @"file2.jpg", @"file3.jpg"];
     
     // each note has an id (time), title (string), section (string), description (string), files (array)
-    NSDictionary *tempNote = @{@"title" : @"Daler",
-                               @"description" : @"This is description of the note",
-                               @"section" : @"CSCI-330abc",
-                               @"files" : tempFilesArray
-                              
-    };
-    
-    [self.notesModel addNote : tempNote];
+//    NSDictionary *tempNote = @{@"title" : @"Daler",
+//                               @"description" : @"This is description of the note",
+//                               @"section" : @"CSCI-330abc",
+//                               @"files" : tempFilesArray
+//                              
+//    };
+//    
+//    [self.notesModel addNote : tempNote];
     
     
     return cell;

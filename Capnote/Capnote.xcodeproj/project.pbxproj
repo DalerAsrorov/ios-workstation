@@ -32,6 +32,9 @@
 		3C9154BA1DF7FCF000ACF682 /* NotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154B81DF7FCF000ACF682 /* NotesModel.m */; };
 		3C9154BB1DF7FCF000ACF682 /* NotesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154B81DF7FCF000ACF682 /* NotesModel.m */; };
 		3C9154BE1DF8060D00ACF682 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154BD1DF8060D00ACF682 /* UserModel.m */; };
+		3C9154C21DF8360300ACF682 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154C11DF8360300ACF682 /* CreateViewController.m */; };
+		3C9154C31DF8360300ACF682 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154C11DF8360300ACF682 /* CreateViewController.m */; };
+		3C9154C41DF8360300ACF682 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154C11DF8360300ACF682 /* CreateViewController.m */; };
 		4EE03D17D414457301AD4033 /* libPods-Capnote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */; };
 		7CAD3E7272CDBC556ADF3A7F /* libPods-CapnoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBBDE8132D0BC66895207797 /* libPods-CapnoteTests.a */; };
 		7F6F5F5DCD8ABE09197797B3 /* libPods-CapnoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F512DC5A86715B929B93D3FA /* libPods-CapnoteUITests.a */; };
@@ -85,6 +88,8 @@
 		3C9154B81DF7FCF000ACF682 /* NotesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesModel.m; sourceTree = "<group>"; };
 		3C9154BC1DF8060D00ACF682 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		3C9154BD1DF8060D00ACF682 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		3C9154C01DF8360300ACF682 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		3C9154C11DF8360300ACF682 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
 		3E3C7689A860E818D5854F74 /* Pods-CapnoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapnoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapnoteTests/Pods-CapnoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		58B01B0A19F942C635E8E228 /* Pods-Capnote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capnote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Capnote/Pods-Capnote.release.xcconfig"; sourceTree = "<group>"; };
 		68DF9DC9AF5BE06ED58EBBC5 /* libPods-Capnote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Capnote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +152,7 @@
 		3C9154661DF6A72900ACF682 /* Capnote */ = {
 			isa = PBXGroup;
 			children = (
+				3C9154BF1DF835D800ACF682 /* Create */,
 				3C9154B61DF7FBCE00ACF682 /* Capnote.entitlements */,
 				3C9154A81DF7D08300ACF682 /* DataModel */,
 				3C91549D1DF7B13D00ACF682 /* Feed */,
@@ -212,6 +218,15 @@
 				3C9154BD1DF8060D00ACF682 /* UserModel.m */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		3C9154BF1DF835D800ACF682 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				3C9154C01DF8360300ACF682 /* CreateViewController.h */,
+				3C9154C11DF8360300ACF682 /* CreateViewController.m */,
+			);
+			name = Create;
 			sourceTree = "<group>";
 		};
 		B65588BEFE30E5110073048F /* Frameworks */ = {
@@ -531,6 +546,7 @@
 			files = (
 				3C9154A01DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 				3C9154A51DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
+				3C9154C21DF8360300ACF682 /* CreateViewController.m in Sources */,
 				3C9154B91DF7FCF000ACF682 /* NotesModel.m in Sources */,
 				3C91546F1DF6A72900ACF682 /* ViewController.m in Sources */,
 				3C91546C1DF6A72900ACF682 /* AppDelegate.m in Sources */,
@@ -546,6 +562,7 @@
 			files = (
 				3C9154851DF6A72900ACF682 /* CapnoteTests.m in Sources */,
 				3C9154BA1DF7FCF000ACF682 /* NotesModel.m in Sources */,
+				3C9154C31DF8360300ACF682 /* CreateViewController.m in Sources */,
 				3C9154A61DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
 				3C9154A11DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 			);
@@ -557,6 +574,7 @@
 			files = (
 				3C9154901DF6A72900ACF682 /* CapnoteUITests.m in Sources */,
 				3C9154BB1DF7FCF000ACF682 /* NotesModel.m in Sources */,
+				3C9154C41DF8360300ACF682 /* CreateViewController.m in Sources */,
 				3C9154A71DF7B39800ACF682 /* FeedTableViewCell.m in Sources */,
 				3C9154A21DF7B17300ACF682 /* FeedTableViewController.m in Sources */,
 			);
