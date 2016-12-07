@@ -95,7 +95,36 @@ static int xNextLocationBuffer;
     [self.imagesBox addSubview: customImageView];
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
     
-//    Fire
+
+    
+    
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+    NSString *fileName = [chosenImage accessibilityIdentifier];
+    NSString *fullPath = [NSString stringWithFormat:@"%@/%@", imageData, fileName];
+    
+    // create reference to storage
+    FIRStorage *storage = [FIRStorage storage];
+    
+    // Create a storage reference from our storage service
+    FIRStorageReference *storageRef = [storage referenceForURL:@"gs://capnote-36deb.appspot.com"];
+    
+    // Create a reference to the file you want to upload
+    FIRStorageReference *imagesRef = [storageRef child:@"image.png"];
+    
+    // Upload the file to the path "images/rivers.jpg"
+    
+    FIRStorageUploadTask *uploadTask = [imagesRef putData:imageData metadata:nil completion:^(FIRStorageMetadata *metadata, NSError *error) {
+        if (error != nil) {
+            // Uh-oh, an error occurred!
+            NSLog(@"Uploaded file succesfully");
+        } else {
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            NSURL *downloadURL = metadata.downloadURL;
+            NSLog(@"Downloads url %@", downloadURL);
+        }
+    }];
+    
+    
     
     // increament cyrrent X coordinate for the next picked image
     dynamicX += defaultWidth + xNextLocationBuffer;
