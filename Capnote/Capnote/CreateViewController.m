@@ -14,6 +14,13 @@
 
 @end
 
+static int buttnCounter;
+static int defaultWidth;
+static int defaultHeight;
+static int dynamicX;
+static int dynamicY;
+static int xNextLocationBuffer;
+
 @implementation CreateViewController
 
 - (void)viewDidLoad {
@@ -25,9 +32,17 @@
     // Connect data
     self.sectionPicker.dataSource = self;
     self.sectionPicker.delegate = self;
-    
     self.pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
     
+    
+    // initializing static variables
+    buttnCounter = 0;
+    dynamicX = 0;
+    dynamicY = 0;
+    
+    defaultWidth = 40;
+    defaultHeight = 50;
+    xNextLocationBuffer = 10;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,6 +71,8 @@
     
     [self presentViewController: self.selectedImagePicker animated:YES completion:NULL];
     
+
+    
 }
 
 - (IBAction)submitNote:(id)sender {
@@ -64,20 +81,21 @@
 
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *) picker {
-    NSLog(@"~~~~WARNING: The user cancelled notes uplad.");
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *) thePicker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    UIImageView *customImageView = [[UIImageView alloc] initWithFrame: CGRectMake (90, 70, 100, 60)];
+    UIImageView *customImageView = [[UIImageView alloc] initWithFrame: CGRectMake (dynamicX, dynamicY, defaultWidth, defaultHeight)];
     customImageView.image = chosenImage;
     
     [self.imagesBox addSubview: customImageView];
-    
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
     
+    dynamicX += defaultWidth + xNextLocationBuffer;
+    NSLog(@"}}}dynamicX value: %d", dynamicX);
+    buttnCounter++;
 }
 
 
