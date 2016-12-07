@@ -95,7 +95,7 @@ static int xNextLocationBuffer;
     [self.imagesBox addSubview: customImageView];
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
     
-    Fire
+//    Fire
     
     // increament cyrrent X coordinate for the next picked image
     dynamicX += defaultWidth + xNextLocationBuffer;
