@@ -35,6 +35,22 @@
     [self fetchNotes];
 }
 
++ (UIImage *) imageWithImage: (UIImage*) sourceImage scaledToWidth: (float) i_width {//method to scale image accordcing to width
+    
+    float oldWidth = sourceImage.size.width;
+    float scaleFactor = i_width / oldWidth;
+    
+    float newHeight = sourceImage.size.height * scaleFactor;
+    float newWidth = oldWidth * scaleFactor;
+    
+    UIGraphicsBeginImageContext(CGSizeMake(newWidth, newHeight));
+    [sourceImage drawInRect:CGRectMake(0, 0, newWidth, newHeight)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -63,17 +79,52 @@
     }];
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return destImage;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_reuseidentifier forIndexPath:indexPath];
     
-    
     NSDictionary *note = self.notePosts[indexPath.row];
     NSString *noteTitle = note[@"title"];
+    NSString *noteDescription = note[@"description"];
+    
+    NSMutableArray *files = note[@"files"];
+    NSLog(@"files %@", files);
+    NSString *firstImageUrlStr = [files objectAtIndex: 0];
+    
+    
+    cell.imageView.layer.cornerRadius = 1;
+    cell.imageView.clipsToBounds = YES;
+    
+    cell.imageView.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    cell.imageView.layer.cornerRadius= 60;
+    cell.imageView.layer.borderWidth= 0.5;
+    cell.imageView.layer.masksToBounds = YES;
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    cell.imageView.layer.borderColor=[[UIColor blackColor] CGColor];
+    
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: firstImageUrlStr]];
+    UIImage* image = [UIImage imageWithData: imageData];
+
+    
+    
+    cell.imageView.image = [self imageWithImage: image convertToSize: CGSizeMake(100, 100)];
+    
     
     cell.textLabel.text = noteTitle;
+    cell.detailTextLabel.text = noteDescription;
+//    cell.imageView.image = ;
     
     return cell;
 }
+
 
 
 /*
