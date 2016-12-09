@@ -14,4 +14,12 @@
 @property (weak, nonatomic) NSDictionary *data;
 @property (weak, nonatomic) NSString *strTitle;
 
+@property (weak, nonatomic) IBOutlet UIImageView *noteImg;
+
+@property (weak, nonatomic) IBOutlet UILabel *noteTitleTitle;
+
+@property (weak, nonatomic) IBOutlet UITextView *noteDescription;
+
+@property (weak, nonatomic) IBOutlet UILabel *noteSection;
+
 @end

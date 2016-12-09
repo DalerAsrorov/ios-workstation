@@ -81,26 +81,62 @@
                                     <navigationItem title="Title" id="2oW-Rc-0MT"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J11-bY-Xl8">
-                                <rect key="frame" x="16" y="72" width="343" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.2044803932" green="0.51182014239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7G-PZ-pNc">
+                                <rect key="frame" x="67" y="122" width="240" height="149"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUc-IL-K50">
+                                <rect key="frame" x="16" y="72" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="V79-dM-DoP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L06-Pr-Qfs">
+                                <rect key="frame" x="67" y="288" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ogd-iv-nF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-16-hbL">
+                                <rect key="frame" x="67" y="469" width="240" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="MbM-9t-BHy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WoX-A9-uON" firstAttribute="top" secondItem="J11-bY-Xl8" secondAttribute="bottom" constant="516" id="ITI-qW-dfq"/>
-                            <constraint firstItem="J11-bY-Xl8" firstAttribute="top" secondItem="pVX-xa-9P0" secondAttribute="bottom" constant="8" symbolic="YES" id="ap6-dB-n5L"/>
-                            <constraint firstItem="J11-bY-Xl8" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leadingMargin" id="hLZ-uS-hNS"/>
-                            <constraint firstItem="Pam-3b-6kh" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leading" id="iRG-ZI-Cer"/>
-                            <constraint firstItem="J11-bY-Xl8" firstAttribute="centerX" secondItem="Pam-3b-6kh" secondAttribute="centerX" id="j8O-WC-Woh"/>
-                            <constraint firstItem="Pam-3b-6kh" firstAttribute="top" secondItem="hgg-uq-UX7" secondAttribute="top" id="q7k-vy-80G"/>
-                            <constraint firstAttribute="trailing" secondItem="Pam-3b-6kh" secondAttribute="trailing" id="qam-gi-ilT"/>
+                            <constraint firstItem="1Mv-16-hbL" firstAttribute="top" secondItem="L06-Pr-Qfs" secondAttribute="bottom" constant="53" id="4m0-YG-o11"/>
+                            <constraint firstItem="j7G-PZ-pNc" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leadingMargin" constant="51" id="5E6-yg-p2r"/>
+                            <constraint firstItem="Pam-3b-6kh" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leading" id="5o4-iP-5XA"/>
+                            <constraint firstItem="j7G-PZ-pNc" firstAttribute="leading" secondItem="L06-Pr-Qfs" secondAttribute="leading" id="AHy-gA-ZAj"/>
+                            <constraint firstItem="Pam-3b-6kh" firstAttribute="top" secondItem="hgg-uq-UX7" secondAttribute="top" id="JQt-mT-INg"/>
+                            <constraint firstItem="L06-Pr-Qfs" firstAttribute="leading" secondItem="1Mv-16-hbL" secondAttribute="leading" id="L8n-1y-XZa"/>
+                            <constraint firstItem="L06-Pr-Qfs" firstAttribute="trailing" secondItem="1Mv-16-hbL" secondAttribute="trailing" id="Pkp-aC-fny"/>
+                            <constraint firstItem="UUc-IL-K50" firstAttribute="top" secondItem="pVX-xa-9P0" secondAttribute="bottom" constant="8" symbolic="YES" id="Pvc-EP-l5R"/>
+                            <constraint firstItem="WoX-A9-uON" firstAttribute="top" secondItem="1Mv-16-hbL" secondAttribute="bottom" constant="106" id="UfX-Cy-V8B"/>
+                            <constraint firstAttribute="trailing" secondItem="Pam-3b-6kh" secondAttribute="trailing" id="bhk-MX-LuQ"/>
+                            <constraint firstItem="j7G-PZ-pNc" firstAttribute="trailing" secondItem="L06-Pr-Qfs" secondAttribute="trailing" id="cP9-oW-Yes"/>
+                            <constraint firstItem="UUc-IL-K50" firstAttribute="centerX" secondItem="j7G-PZ-pNc" secondAttribute="centerX" id="fS6-Rb-KWR"/>
+                            <constraint firstItem="Pam-3b-6kh" firstAttribute="centerX" secondItem="UUc-IL-K50" secondAttribute="centerX" id="ffo-4n-gKC"/>
+                            <constraint firstItem="L06-Pr-Qfs" firstAttribute="top" secondItem="j7G-PZ-pNc" secondAttribute="bottom" constant="17" id="jR9-56-EA0"/>
+                            <constraint firstItem="UUc-IL-K50" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leadingMargin" id="wjg-Tt-UeT"/>
+                            <constraint firstItem="j7G-PZ-pNc" firstAttribute="top" secondItem="UUc-IL-K50" secondAttribute="bottom" constant="8" symbolic="YES" id="wmq-ok-dFo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="noteTitle" destination="J11-bY-Xl8" id="8Kk-hV-Mug"/>
+                        <outlet property="noteDescription" destination="L06-Pr-Qfs" id="I9U-C5-stE"/>
+                        <outlet property="noteImg" destination="j7G-PZ-pNc" id="hXU-6F-fQP"/>
+                        <outlet property="noteSection" destination="1Mv-16-hbL" id="VK6-UV-3NT"/>
+                        <outlet property="noteTitleTitle" destination="UUc-IL-K50" id="4dd-kF-dOy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGB-hO-V4m" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -23,6 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.noteTitle.text = self.data[@"title"];
+    self.noteTitleTitle.text = self.data[@"text"];
+    self.noteSection.text = self.data[@"section"];
+    self.noteDescription.text = self.data[@"description"];
+    
+    NSMutableArray* files = self.data[@"files"];
+    NSString *filePath = [files objectAtIndex: 0]; // take first
+    
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: filePath]];
+    self.noteImg.image = [UIImage imageWithData: imageData];
+    
     // Do any additional setup after loading the view.
 }
 
