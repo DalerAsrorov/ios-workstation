@@ -74,14 +74,22 @@ static NSString* kTestCurrentUserName;
         int counter = 0;
         
         for(id key in allNotes) {
+            NSString *keyIdStr = [NSString stringWithFormat:@"%@", key];
 //            NSLog(@"key=%@ value=%@", key, [myDict objectForKey:key]);
             NSDictionary *currentNote = [allNotes objectForKey:key];
+            NSDictionary *currentNoteWithID = @{@"adder" : currentNote[@"adder"],
+                                                @"description" : currentNote[@"description"],
+                                                @"files" : currentNote[@"files"],
+                                                @"title" : currentNote[@"title"],
+                                                @"section" : currentNote[@"section"],
+                                                @"noteID" : key
+                                                };
             NSString *sectionName = currentNote[@"section"];
             
             [self isSubscribedTo:sectionName completion:^(BOOL success) {
                 if(success) {
                      
-                    completionBlock(currentNote);
+                    completionBlock(currentNoteWithID);
                 }
             }];
             
