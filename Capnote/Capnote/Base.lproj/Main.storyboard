@@ -48,7 +48,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="soQ-u8-LGE" kind="show" id="4fY-fp-f73"/>
+                                    <segue destination="soQ-u8-LGE" kind="show" identifier="" id="4fY-fp-f73"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="gow-9q-MY1">
             <objects>
-                <viewController id="soQ-u8-LGE" sceneMemberID="viewController">
+                <viewController id="soQ-u8-LGE" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pVX-xa-9P0"/>
                         <viewControllerLayoutGuide type="bottom" id="WoX-A9-uON"/>
@@ -81,14 +81,27 @@
                                     <navigationItem title="Title" id="2oW-Rc-0MT"/>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J11-bY-Xl8">
+                                <rect key="frame" x="16" y="72" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.2044803932" green="0.51182014239999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WoX-A9-uON" firstAttribute="top" secondItem="J11-bY-Xl8" secondAttribute="bottom" constant="516" id="ITI-qW-dfq"/>
+                            <constraint firstItem="J11-bY-Xl8" firstAttribute="top" secondItem="pVX-xa-9P0" secondAttribute="bottom" constant="8" symbolic="YES" id="ap6-dB-n5L"/>
+                            <constraint firstItem="J11-bY-Xl8" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leadingMargin" id="hLZ-uS-hNS"/>
                             <constraint firstItem="Pam-3b-6kh" firstAttribute="leading" secondItem="hgg-uq-UX7" secondAttribute="leading" id="iRG-ZI-Cer"/>
+                            <constraint firstItem="J11-bY-Xl8" firstAttribute="centerX" secondItem="Pam-3b-6kh" secondAttribute="centerX" id="j8O-WC-Woh"/>
                             <constraint firstItem="Pam-3b-6kh" firstAttribute="top" secondItem="hgg-uq-UX7" secondAttribute="top" id="q7k-vy-80G"/>
                             <constraint firstAttribute="trailing" secondItem="Pam-3b-6kh" secondAttribute="trailing" id="qam-gi-ilT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteTitle" destination="J11-bY-Xl8" id="8Kk-hV-Mug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wGB-hO-V4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
