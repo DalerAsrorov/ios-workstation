@@ -286,7 +286,7 @@
                         <outlet property="desc" destination="4Zw-Eh-ROt" id="woX-7l-UGk"/>
                         <outlet property="imagesBox" destination="6FF-jk-lQH" id="lIQ-37-ntJ"/>
                         <outlet property="sectionPicker" destination="tjF-CA-vJ7" id="AOp-0u-r7s"/>
-                        <outlet property="textView" destination="4Zw-Eh-ROt" id="PcF-M8-wL0"/>
+                        <outlet property="titleTextField" destination="7aI-Bb-zeq" id="O9I-PH-ura"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-Lr-yBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
