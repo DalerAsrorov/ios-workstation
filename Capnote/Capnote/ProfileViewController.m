@@ -17,6 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.ref = [[FIRDatabase database] reference];
+    
+    [[[self.ref child:@"users"] child:@"dalerasrorov"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *info = snapshot.value;
+        
+//        self.profileImg = ;
+        self.bio.text = info[@"bio"];
+        self.username.text = info[@"fullname"];;
+        
+        
+//        completionBlock(NO);
+        
+        // ...
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

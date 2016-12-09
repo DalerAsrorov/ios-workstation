@@ -157,13 +157,54 @@
                     <view key="view" contentMode="scaleToFill" id="ZDr-Cb-HFK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me" translatesAutoresizingMaskIntoConstraints="NO" id="kwu-r9-AgH">
+                                <rect key="frame" x="67" y="95" width="240" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="8gw-yD-BBW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygc-vs-rkf">
+                                <rect key="frame" x="16" y="28" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HoX-re-RnF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-Ed-oCJ">
+                                <rect key="frame" x="67" y="329" width="240" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kwu-r9-AgH" firstAttribute="trailing" secondItem="6dk-Ed-oCJ" secondAttribute="trailing" id="1DX-Io-Swx"/>
+                            <constraint firstItem="kwu-r9-AgH" firstAttribute="top" secondItem="ygc-vs-rkf" secondAttribute="bottom" constant="27" id="3ad-fD-sas"/>
+                            <constraint firstItem="6dk-Ed-oCJ" firstAttribute="top" secondItem="kwu-r9-AgH" secondAttribute="bottom" constant="54" id="M2h-a3-Ngc"/>
+                            <constraint firstItem="VJw-Kk-Qat" firstAttribute="top" secondItem="6dk-Ed-oCJ" secondAttribute="bottom" constant="118" id="U9t-So-Ycc"/>
+                            <constraint firstItem="kwu-r9-AgH" firstAttribute="leading" secondItem="6dk-Ed-oCJ" secondAttribute="leading" id="WVj-8m-93w"/>
+                            <constraint firstItem="kwu-r9-AgH" firstAttribute="leading" secondItem="ZDr-Cb-HFK" secondAttribute="leadingMargin" constant="51" id="YSW-7Q-RBz"/>
+                            <constraint firstItem="ygc-vs-rkf" firstAttribute="trailing" secondItem="ZDr-Cb-HFK" secondAttribute="trailingMargin" id="akX-3E-Ucy"/>
+                            <constraint firstItem="ygc-vs-rkf" firstAttribute="leading" secondItem="ZDr-Cb-HFK" secondAttribute="leadingMargin" id="pvI-xE-opF"/>
+                            <constraint firstItem="ygc-vs-rkf" firstAttribute="top" secondItem="GpW-Y3-gcd" secondAttribute="bottom" constant="8" symbolic="YES" id="zKo-uz-F5B"/>
+                            <constraint firstItem="ygc-vs-rkf" firstAttribute="centerX" secondItem="kwu-r9-AgH" secondAttribute="centerX" id="zjV-qw-qGX"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="circle-user" id="zmV-Fp-SjD"/>
+                    <connections>
+                        <outlet property="bio" destination="6dk-Ed-oCJ" id="CXE-MR-7VS"/>
+                        <outlet property="profileImg" destination="kwu-r9-AgH" id="JAg-5M-XcC"/>
+                        <outlet property="username" destination="ygc-vs-rkf" id="xDj-Nd-7UF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0K3-Ub-SC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="77" y="918"/>
+            <point key="canvasLocation" x="76" y="917.99100449775119"/>
         </scene>
         <!--Add-->
         <scene sceneID="xtA-K5-5aI">

@@ -38,7 +38,7 @@ static NSString* tempUsername = @"dalerasrorov";
     self.sectionPicker.delegate = self;
    
     // initialize vars
-    self.pickerData = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6"];
+    self.pickerData = @[@"itp342", @"ee342", @"csci350"];
     self.photoList = [NSMutableArray new];
     self.photoListPointer = [NSMutableArray new];
     self.notesModel = [[NotesModel alloc] init];
