@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *sectionPicker;
+@property (weak, nonatomic) IBOutlet UIButton *resetInput;
 
 @property (weak) UIAlertController * alert;
 
@@ -34,5 +35,6 @@
 
 - (IBAction)addNewImage:(id)sender;
 - (IBAction)submitNote:(id)sender;
+- (IBAction)resetButtonAction:(id)sender;
 
 @end

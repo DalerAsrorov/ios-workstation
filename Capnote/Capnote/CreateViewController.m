@@ -217,6 +217,10 @@ static NSString* tempUsername = @"dalerasrorov";
 //    [self addNote];
 }
 
+- (IBAction)resetButtonAction:(id)sender {
+    [self clearAll];
+}
+
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *) picker {
     [self.selectedImagePicker dismissViewControllerAnimated:YES completion:NULL];
 }

@@ -228,6 +228,7 @@
                                     <color key="titleShadowColor" red="0.98627094660000003" green="1" blue="0.98359457959999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="resetButtonAction:" destination="5ed-YZ-VLC" eventType="touchUpInside" id="kuC-If-pBP"/>
                                     <action selector="submitNote:" destination="5ed-YZ-VLC" eventType="touchUpInside" id="5On-HJ-eZW"/>
                                 </connections>
                             </button>
@@ -285,6 +286,7 @@
                         <outlet property="addImageButton" destination="h6N-Sb-S0Y" id="tCg-WH-4AC"/>
                         <outlet property="desc" destination="4Zw-Eh-ROt" id="woX-7l-UGk"/>
                         <outlet property="imagesBox" destination="6FF-jk-lQH" id="lIQ-37-ntJ"/>
+                        <outlet property="resetInput" destination="oC9-hS-HbG" id="3MW-tq-Tsr"/>
                         <outlet property="sectionPicker" destination="tjF-CA-vJ7" id="AOp-0u-r7s"/>
                         <outlet property="titleTextField" destination="7aI-Bb-zeq" id="O9I-PH-ura"/>
                     </connections>
