@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C9154691DF6A72900ACF682 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154681DF6A72900ACF682 /* main.m */; };
 		3C91546C1DF6A72900ACF682 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C91546B1DF6A72900ACF682 /* AppDelegate.m */; };
-		3C91546F1DF6A72900ACF682 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C91546E1DF6A72900ACF682 /* ViewController.m */; };
 		3C9154721DF6A72900ACF682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154701DF6A72900ACF682 /* Main.storyboard */; };
 		3C9154751DF6A72900ACF682 /* Capnote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C9154731DF6A72900ACF682 /* Capnote.xcdatamodeld */; };
 		3C9154771DF6A72900ACF682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9154761DF6A72900ACF682 /* Assets.xcassets */; };
@@ -67,8 +66,6 @@
 		3C9154681DF6A72900ACF682 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C91546A1DF6A72900ACF682 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C91546B1DF6A72900ACF682 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3C91546D1DF6A72900ACF682 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3C91546E1DF6A72900ACF682 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3C9154711DF6A72900ACF682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C9154741DF6A72900ACF682 /* Capnote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Capnote.xcdatamodel; sourceTree = "<group>"; };
 		3C9154761DF6A72900ACF682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 				3C91549D1DF7B13D00ACF682 /* Feed */,
 				3C91546A1DF6A72900ACF682 /* AppDelegate.h */,
 				3C91546B1DF6A72900ACF682 /* AppDelegate.m */,
-				3C91546D1DF6A72900ACF682 /* ViewController.h */,
-				3C91546E1DF6A72900ACF682 /* ViewController.m */,
 				3C9154701DF6A72900ACF682 /* Main.storyboard */,
 				3C9154761DF6A72900ACF682 /* Assets.xcassets */,
 				3C9154AE1DF7DD0000ACF682 /* Activity Feed-50.png */,
@@ -564,7 +559,6 @@
 				3C9154C21DF8360300ACF682 /* CreateViewController.m in Sources */,
 				3C9154B91DF7FCF000ACF682 /* NotesModel.m in Sources */,
 				3C9154C81DF85F7000ACF682 /* ProfileViewController.m in Sources */,
-				3C91546F1DF6A72900ACF682 /* ViewController.m in Sources */,
 				3C91546C1DF6A72900ACF682 /* AppDelegate.m in Sources */,
 				3C9154751DF6A72900ACF682 /* Capnote.xcdatamodeld in Sources */,
 				3C9154BE1DF8060D00ACF682 /* UserModel.m in Sources */,

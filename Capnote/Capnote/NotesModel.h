@@ -18,6 +18,11 @@
 - (void) removeNoteAt: (NSInteger) noteID;
 - (NSMutableArray *) getAllNotes;
 - (NSDictionary *) getCurrentNoteAt: (NSInteger) noteID;
-- (NSString *) generateKey; 
+- (NSString *) generateKey;
+- (void) getSubsFeedNotes: (NSString *) sectionName
+               completion: (void (^)(NSDictionary *data))completionBlock;
+- (void) isSubscribedTo: (NSString *) sectionName
+             completion: (void (^)(BOOL success))completionBlock;
+- (int) getNumOfSubPosts;
 
 @end

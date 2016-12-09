@@ -139,8 +139,6 @@ static NSString* tempUsername = @"dalerasrorov";
     index = [self.sectionPicker selectedRowInComponent:0];
     noteSection = [self.pickerData objectAtIndex: index];
     
-    NSLog(@"photoList pointer: %@", self.photoListPointer);
-    
     NSDictionary *postDict = @{@"adder" : noteAdder,
                            @"description" : noteDescription,
                            @"files" : photoListPointers,
@@ -210,7 +208,6 @@ static NSString* tempUsername = @"dalerasrorov";
 }
 
 - (IBAction)submitNote:(id)sender {
-    NSLog(@"List: %@", self.photoList);
 
     // stored pointers to URLs in self.photoListPointer
     [self storePhotosToGoogleStorage];

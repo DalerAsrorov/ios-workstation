@@ -12,5 +12,6 @@
 
 @interface FeedTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
+- (void) fetchNotes;
 
 @end

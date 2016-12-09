@@ -12,6 +12,7 @@
 
 @property NSString  *reuseidentifier;
 @property (strong) NotesModel *notesModel;
+@property NSMutableArray* notePosts;
 
 @end
 
@@ -23,15 +24,15 @@
     _reuseidentifier = @"FeedTableCell";
     _notesModel = [[NotesModel alloc] init];
     
-    FIRStorage *storage = [FIRStorage storage];
-    
-    
+    self.notePosts = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self fetchNotes];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,29 +50,27 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
     
-    return 20;
+    return self.notePosts.count;
 }
 
+- (void) fetchNotes {
+    [self.notesModel getSubsFeedNotes:@"some" completion:^(NSDictionary *data) {
+        [self.notePosts addObject: data];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    }];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_reuseidentifier forIndexPath:indexPath];
-
     
-    // Configure the cell...
-    cell.textLabel.text = @"something";
     
-    NSArray *tempFilesArray = @[@"file1.jpg", @"file2.jpg", @"file3.jpg"];
+    NSDictionary *note = self.notePosts[indexPath.row];
+    NSString *noteTitle = note[@"title"];
     
-    // each note has an id (time), title (string), section (string), description (string), files (array)
-//    NSDictionary *tempNote = @{@"title" : @"Daler",
-//                               @"description" : @"This is description of the note",
-//                               @"section" : @"CSCI-330abc",
-//                               @"files" : tempFilesArray
-//                              
-//    };
-//    
-//    [self.notesModel addNote : tempNote];
-    
+    cell.textLabel.text = noteTitle;
     
     return cell;
 }
