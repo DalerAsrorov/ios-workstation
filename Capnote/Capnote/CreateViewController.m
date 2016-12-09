@@ -74,7 +74,9 @@ static NSString* tempUsername = @"dalerasrorov";
         [v removeFromSuperview];
     }
     
-    
+    // make sure to start over when
+    // uploading a new image/note
+    dynamicX = 0;
     
 }
 
